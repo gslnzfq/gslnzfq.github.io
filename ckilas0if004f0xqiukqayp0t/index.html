@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+<!--百度统计-->
+<script>
+    // var _hmt = _hmt || [];
+    // (function () {
+    //     var hm = document.createElement("script");
+    //     hm.src = "https://hm.baidu.com/hm.js?964de0b14aeaff7fd14f418fd4350644";
+    //     var s = document.getElementsByTagName("script")[0];
+    //     s.parentNode.insertBefore(hm, s);
+    // })();
+</script>
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>
+        
+        web使用facebook和line等分享 |
+        
+        强哥的网站</title>
+    <meta name="description" content="Fed Tech Official Website">
+    <meta name="keywords" content="Github,Hexo,FED,Tech">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="target-densitydpi=device-dpi,user-scalable=no,initial-scale=1,maximum-scale=1, minimum-scale=1">
+    <link rel="shortcut icon" href="https://gitee.com/fqzhang/web-assets/raw/master/uPic/2020/06/avatar-fqyKY9.jpg">
+    <link rel="alternate" href="/atom.xml" title="强哥的网站">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="前言​我们在做开发的时候，需要将自己开发的网页分享到facebook、telegram、line等页面。然后需要在分享到的社交软件或者是朋友圈的时候，展示一些和链接相关的文案和图片（也就是富媒体展示）。在国内的一些社交网站上可以调用SDK或者url使用传递参数的方式来展示分享的内容。">
+<meta name="keywords" content="javascript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="web使用facebook和line等分享">
+<meta property="og:url" content="/ckilas0if004f0xqiukqayp0t/index.html">
+<meta property="og:site_name" content="强哥的网站">
+<meta property="og:description" content="前言​我们在做开发的时候，需要将自己开发的网页分享到facebook、telegram、line等页面。然后需要在分享到的社交软件或者是朋友圈的时候，展示一些和链接相关的文案和图片（也就是富媒体展示）。在国内的一些社交网站上可以调用SDK或者url使用传递参数的方式来展示分享的内容。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2020-12-12T06:07:22.027Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="web使用facebook和line等分享">
+<meta name="twitter:description" content="前言​我们在做开发的时候，需要将自己开发的网页分享到facebook、telegram、line等页面。然后需要在分享到的社交软件或者是朋友圈的时候，展示一些和链接相关的文案和图片（也就是富媒体展示）。在国内的一些社交网站上可以调用SDK或者url使用传递参数的方式来展示分享的内容。">
+
+    <!--<link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+    <link href='//cdn.bootcss.com/node-waves/0.7.5/waves.min.css' rel='stylesheet'> -->
+    <link rel="stylesheet" href="/style.css">
+
+    
+
+    <script>
+        function setLoadingBarProgress(num) {
+            document.getElementById('loading-bar').style.width = num + "%";
+        }
+    </script>
+</head>
+</html>
+<body>
+<a name="top"></a>
+<div id="loading-bar-wrapper">
+    <div id="loading-bar"></div>
+</div>
+
+
+<script>setLoadingBarProgress(20)</script>
+<header class="l_header">
+    <div class="wrapper container">
+        <a class="logo flat-box" href='/'>
+            强哥的网站
+        </a>
+        <div class='menu'>
+            <ul class='h-list'>
+                
+                <li>
+                    <a class='flat-box nav-home' href='/'>
+                        首页
+                    </a>
+                </li>
+                
+                <li>
+                    <a class='flat-box nav-archives' href='/archives/'>
+                        归档
+                    </a>
+                </li>
+                
+                <li>
+                    <a class='flat-box nav-front' href='/categories/frontend/'>
+                        前端
+                    </a>
+                </li>
+                
+                <li>
+                    <a class='flat-box nav-project' href='/project/'>
+                        项目
+                    </a>
+                </li>
+                
+            </ul>
+            <div class='underline'></div>
+        </div>
+        
+        <div class="m_search">
+            <form name="searchform" class="form u-search-form">
+                <input type="text" class="input u-search-input" placeholder="输入关键字"/>
+                <span class="icon icon-search"></span>
+            </form>
+        </div>
+        
+        <ul class='switcher h-list'>
+            
+            <li class='s-search'><a href='javascript:void(0)'><span class="icon icon-search"></span></a></li>
+            
+            <li class='s-menu'><a href='javascript:void(0)'><span class="icon icon-menu"></span></a></li>
+        </ul>
+    </div>
+    <aside class="menu-phone">
+        <nav>
+            
+            <a href="/" class="nav-home nav">
+                首页
+            </a>
+            
+            <a href="/archives/" class="nav-archives nav">
+                归档
+            </a>
+            
+            <a href="/categories/frontend/" class="nav-front nav">
+                前端
+            </a>
+            
+            <a href="/project/" class="nav-project nav">
+                项目
+            </a>
+            
+        </nav>
+    </aside>
+</header>
+
+<script>setLoadingBarProgress(40)</script>
+<div class="l_body">
+    <a name="top_app"></a>
+    <div class='container'>
+        <div class='l_main'>
+            <article
+  id="post-web使用facebook和line等分享"
+  class="post white-box article-type-post"
+  itemscope
+  itemprop="blogPost"
+>
+  <a target="_blank" class="edit-article" href="https://github.com/gslnzfq/blog-src/edit/master/source/_posts/web使用facebook和line等分享.md">编辑</a>
+  <section class="meta">
+    <h2 class="title">
+      <a href="/ckilas0if004f0xqiukqayp0t/">
+        web使用facebook和line等分享
+      </a>
+    </h2>
+    
+
+<div class='cats'>
+    <a href="/categories/frontend/">前端</a>
+</div>
+
+  </section>
+  
+  <section class="tog"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#方案"><span class="toc-number">2.</span> <span class="toc-text">方案</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、生成数据源"><span class="toc-number">2.1.</span> <span class="toc-text">一、生成数据源</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二、实现分享"><span class="toc-number">2.2.</span> <span class="toc-text">二、实现分享</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1、facebook分享方式"><span class="toc-number">2.2.1.</span> <span class="toc-text">1、facebook分享方式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2、line分享方式"><span class="toc-number">2.2.2.</span> <span class="toc-text">2、line分享方式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3、telegram分享方式"><span class="toc-number">2.2.3.</span> <span class="toc-text">3、telegram分享方式</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考"><span class="toc-number">3.</span> <span class="toc-text">参考</span></a></li></ol></section>
+  
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>​我们在做开发的时候，需要将自己开发的网页分享到facebook、telegram、line等页面。然后需要在分享到的社交软件或者是朋友圈的时候，展示一些和链接相关的文案和图片（也就是富媒体展示）。在国内的一些社交网站上可以调用SDK或者url使用传递参数的方式来展示分享的内容。<br><a id="more"></a></p>
+<h2 id="方案"><a href="#方案" class="headerlink" title="方案"></a>方案</h2><h3 id="一、生成数据源"><a href="#一、生成数据源" class="headerlink" title="一、生成数据源"></a>一、生成数据源</h3><p>​    社交平台获取链接相关的信息时，一般都是通过抓取链接响应的meta标签来实现的（可以理解成我们使用ajax读取了我们传递的url的页面的信息，然后解析html结构读取meta标签上的配置信息）。因为不是在浏览器中运行，所以meta标签的数据在服务器端获取的时候就需要生成，不能抓取js来生成meta标签。meta标签分享的配置有一个协议（facebook制定的，很常用的三方社交网站支持这个协议），下面说一下这个协议。</p>
+<blockquote>
+<p>OG协议首页：<a href="http://ogp.me/" target="_blank" rel="noopener">http://ogp.me/</a></p>
+</blockquote>
+<p>我们最常用的字段如下（此处不多做介绍，可以使用上面的链接自行查询API）：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">prefix</span>=<span class="string">"og: http://ogp.me/ns#"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>The Rock (1996)<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 显示在分享上的title，一般是显示在第一行 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">property</span>=<span class="string">"og:title"</span> <span class="attr">content</span>=<span class="string">"The Rock"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">property</span>=<span class="string">"og:type"</span> <span class="attr">content</span>=<span class="string">"article"</span> /&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 显示在分享上的描述信息，一般是显示在第二行的小字 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">property</span>=<span class="string">"og:description"</span> <span class="attr">content</span>=<span class="string">"该网页的描述"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">property</span>=<span class="string">"og:url"</span> <span class="attr">content</span>=<span class="string">"http://www.imdb.com/title/tt0117500/"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">property</span>=<span class="string">"og:image"</span> <span class="attr">content</span>=<span class="string">"http://ia.media-imdb.com/images/rock.jpg"</span> /&gt;</span></span><br><span class="line">...</span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">...</span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>下面有两种方式可以定制分享的内容：</p>
+<p>1、使用静态的meta标签；</p>
+<p>​    简单来讲就是，将所有的数据写死在html文件head里面，这样的坏处就是不能根据内容来定制自己展示的样式，比较不常用，常见的方式是作为网站的宣传来分享使用，对于内容固定的场景。</p>
+<p>2、使用后端语言生成meta标签；</p>
+<p>​    也算是服务端渲染的一个场景吧，就是根据我们传递的数据让后端动态生成图片文本等资源，这样做的好处就是显示的内容由用户定义，比较灵活；缺点是需要服务端的辅助，前端是实现不了的。还有部分三方应用并不支持动态的资源定义，就像telegram的分享，只能注册过的链接才会富媒体展示。</p>
+<h3 id="二、实现分享"><a href="#二、实现分享" class="headerlink" title="二、实现分享"></a>二、实现分享</h3><h4 id="1、facebook分享方式"><a href="#1、facebook分享方式" class="headerlink" title="1、facebook分享方式"></a>1、facebook分享方式</h4><p>facebook分享的时候需要在meta里面配置开发这id，详细：</p>
+<blockquote>
+<p>使用SDK的方式（推荐）</p>
+</blockquote>
+<p>A、首先我们要加载facebook的sdk，加载方式：<a href="https://developers.facebook.com/docs/javascript/quickstart" target="_blank" rel="noopener">https://developers.facebook.com/docs/javascript/quickstart</a></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.fbAsyncInit = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">//  到这里就说明FB加载成功了，这里我们一般会以事件的形式通知调用者来调用</span></span><br><span class="line">    FB.init(&#123;</span><br><span class="line">      appId            : <span class="string">'your-app-id'</span>,</span><br><span class="line">      autoLogAppEvents : <span class="literal">true</span>,</span><br><span class="line">      xfbml            : <span class="literal">true</span>,</span><br><span class="line">      version          : <span class="string">'v3.0'</span></span><br><span class="line">    &#125;);</span><br><span class="line">    <span class="comment">// 这里我做一个基于jq的事件通知</span></span><br><span class="line">    $(<span class="string">'window'</span>).trigger(<span class="string">'fbSdkLoaded'</span>);</span><br><span class="line">    <span class="built_in">window</span>.fb = FB;</span><br><span class="line">&#125;;</span><br><span class="line">  </span><br><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params">d, s, id</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> js, fjs = d.getElementsByTagName(s)[<span class="number">0</span>];</span><br><span class="line">    <span class="keyword">if</span> (d.getElementById(id)) &#123;<span class="keyword">return</span>;&#125;</span><br><span class="line">    js = d.createElement(s); js.id = id;</span><br><span class="line">    js.src = <span class="string">"https://connect.facebook.net/en_US/sdk.js"</span>;</span><br><span class="line">    fjs.parentNode.insertBefore(js, fjs);</span><br><span class="line">&#125;(<span class="built_in">document</span>, <span class="string">'script'</span>, <span class="string">'facebook-jssdk'</span>));</span><br></pre></td></tr></table></figure>
+<p>B、我们配置一下我们要分享的页面的meta标签：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">property</span>=<span class="string">"og:site_name"</span> <span class="attr">content</span>=<span class="string">"这里是title"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">property</span>=<span class="string">"og:title"</span> <span class="attr">content</span>=<span class="string">"这里也是title"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">property</span>=<span class="string">"og:url"</span> <span class="attr">content</span>=<span class="string">"点击以后要跳转的地址"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">property</span>=<span class="string">"og:description"</span> <span class="attr">content</span>=<span class="string">"这里是分享的描述文件"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">property</span>=<span class="string">"og:image"</span> <span class="attr">content</span>=<span class="string">"这里是图片的地址"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">property</span>=<span class="string">"fb:app_id"</span> <span class="attr">content</span>=<span class="string">"这里是fb的开发者id"</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+<p>C、开始分享我们的链接：<a href="https://developers.facebook.com/docs/sharing/reference/share-dialog" target="_blank" rel="noopener">https://developers.facebook.com/docs/sharing/reference/share-dialog</a>，下面就封装一个分享的方法：  </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">share</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">handle</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="comment">// 这个方法的参数可以看上面的链接，不一定向下面的这样写。</span></span><br><span class="line">      FB.ui(&#123;</span><br><span class="line">          method: <span class="string">'share_open_graph'</span>,</span><br><span class="line">          action_type: <span class="string">'og.likes'</span>,</span><br><span class="line">          action_properties: <span class="built_in">JSON</span>.stringify(&#123;</span><br><span class="line">            object:<span class="string">'https://developers.facebook.com/docs/'</span>,</span><br><span class="line">          &#125;)</span><br><span class="line">      &#125;, <span class="function"><span class="keyword">function</span>(<span class="params">response</span>)</span>&#123;&#125;);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">window</span>.fb) &#123;</span><br><span class="line">      handle();</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    	<span class="comment">//  如果没有加载成功，需要监听事件</span></span><br><span class="line">      $(<span class="built_in">window</span>).on(<span class="string">'fbSdkLoaded'</span>, handle);</span><br><span class="line">    &#125; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>使用链接的方式（也需要配置meta标签，同上）</p>
+</blockquote>
+<p>A、直接将location.href导向分享地址即可（注意里面的href需要使用<em>encodeURIComponent</em>方法转一下），在这里还是推荐使用SDK的方式分享。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">https://www.facebook.com/dialog/share?</span><br><span class="line">  app_id=145634995501895</span><br><span class="line">  &amp;display=popup</span><br><span class="line">  &amp;href=你要分享给别人的地址</span><br><span class="line">  &amp;redirect_uri=分享成功后需要跳转的地址</span><br></pre></td></tr></table></figure>
+<h4 id="2、line分享方式"><a href="#2、line分享方式" class="headerlink" title="2、line分享方式"></a>2、line分享方式</h4><blockquote>
+<p>使用链接的方式</p>
+</blockquote>
+<p>A、我们先在要分享的页面加上meta的信息，这个不需要开发者id，例子：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">property</span>=<span class="string">"og:title"</span> <span class="attr">content</span>=<span class="string">"显示的title信息"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">property</span>=<span class="string">"og:description"</span> <span class="attr">content</span>=<span class="string">"描述信息"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">property</span>=<span class="string">"og:image"</span> <span class="attr">content</span>=<span class="string">"图片的地址"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">property</span>=<span class="string">"og:url"</span> <span class="attr">content</span>=<span class="string">"点击以后要跳转的地址"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">property</span>=<span class="string">"og:type"</span> <span class="attr">content</span>=<span class="string">"article"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>B、这个比较简单，在分享的链接中配置好meta元数据后，直接使用链接就能实现分享到timeline或者好友群组等。下面是分享的链接：</p>
+<p><a href="https://social-plugins.line.me/lineit/share?url=${encodeURIComponent(location.href)}" target="_blank" rel="noopener">https://social-plugins.line.me/lineit/share?url=${encodeURIComponent(location.href)}</a></p>
+<h4 id="3、telegram分享方式"><a href="#3、telegram分享方式" class="headerlink" title="3、telegram分享方式"></a>3、telegram分享方式</h4><blockquote>
+<p>使用链接和机器人注册的方式</p>
+</blockquote>
+<p>​    也是通过链接分享的，但是如果需要该链接富媒体展示，需要在机器人做注册（机器人注册时基于链接的，如果链接修改了，就不能显示富媒体了，即使参数和hash修改都会导致显示富媒体失败）。</p>
+<p>A、去机器人注册一下你要分享的链接（机器人地址：<a href="https://t.me/webpagebot" target="_blank" rel="noopener">https://t.me/webpagebot</a>）;</p>
+<p>B、分享链接：<a href="https://t.me/share/url?url=你要分享的URL" target="_blank" rel="noopener">https://t.me/share/url?url=你要分享的URL</a>;</p>
+<p>C、你去调用一下分享，发现在聊天的是窗口已经可以展示图片和文本了。</p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><a href="http://ogp.me/" target="_blank" rel="noopener">http://ogp.me/</a></li>
+<li><a href="https://telegram.wiki/general/website-sharing" target="_blank" rel="noopener">https://telegram.wiki/general/website-sharing</a></li>
+<li><a href="https://telegram.wiki/general/link-previews" target="_blank" rel="noopener">https://telegram.wiki/general/link-previews</a></li>
+<li><a href="https://social-plugins.line.me/zh_TW/how_to_install" target="_blank" rel="noopener">https://social-plugins.line.me/zh_TW/how_to_install</a></li>
+<li><a href="https://developers.facebook.com/docs/sharing/reference/share-dialog" target="_blank" rel="noopener">https://developers.facebook.com/docs/sharing/reference/share-dialog</a></li>
+<li><a href="https://developers.line.me/en/faq/" target="_blank" rel="noopener">https://developers.line.me/en/faq/</a></li>
+<li><a href="https://stackoverflow.com/questions/35268940/how-to-force-telegram-to-update-link-preview" target="_blank" rel="noopener">https://stackoverflow.com/questions/35268940/how-to-force-telegram-to-update-link-preview</a></li>
+<li><a href="http://www.4u4v.net/meta-the-property-of-the-open-graph-protocol-open-content-protocol.html" target="_blank" rel="noopener">http://www.4u4v.net/meta-the-property-of-the-open-graph-protocol-open-content-protocol.html</a></li>
+</ul>
+
+    </div>
+    <!-- 循环显示所有的tags -->
+    
+    <div class="article-tags tags">
+      
+      <a href="/tags/javascript/">javascript</a>
+      
+    </div>
+    
+  </section>
+  <div class="copyright-block">
+    <p>- 复制请标明出处 -</p>
+    <p>撰写时间：2018年05月15日</p>
+    <p>
+      联系方式：<a href="mailto:zhangfqmail@126.com">zhangfqmail@126.com</a>
+    </p>
+    <p>
+      本文链接：<a
+        href="http://gslnzfq.github.io/ckilas0if004f0xqiukqayp0t/"
+        target="_blank"
+        >web使用facebook和line等分享</a
+      >
+    </p>
+  </div>
+  
+</article>
+
+        </div>
+        <aside class='l_side'>
+            
+<section class='m_widget about'>
+    
+    <a href="/about"><img class='avatar waves-image' src='https://gitee.com/fqzhang/web-assets/raw/master/uPic/2020/06/avatar-fqyKY9.jpg'/></a>
+    
+    <div class='header'>强哥</div>
+    <div class='content'>
+        <div>前端工程师5年,技术框架/工具爱好者</div>
+    </div>
+</section>
+
+
+
+<div class="m_widget tagcloud">
+    <div class="header">标签</div>
+    <div class='content'>
+        <a href="/tags/Webstorm/" style="font-size: 14px; color: #808080">Webstorm</a> <a href="/tags/angularjs/" style="font-size: 15.2px; color: #666">angularjs</a> <a href="/tags/centos/" style="font-size: 18.8px; color: #1a1a1a">centos</a> <a href="/tags/css/" style="font-size: 18.8px; color: #1a1a1a">css</a> <a href="/tags/docker/" style="font-size: 15.2px; color: #666">docker</a> <a href="/tags/git/" style="font-size: 14px; color: #808080">git</a> <a href="/tags/hadoop/" style="font-size: 14px; color: #808080">hadoop</a> <a href="/tags/java/" style="font-size: 15.2px; color: #666">java</a> <a href="/tags/javascript/" style="font-size: 20px; color: #000">javascript</a> <a href="/tags/mixpanel/" style="font-size: 14px; color: #808080">mixpanel</a> <a href="/tags/mui/" style="font-size: 16.4px; color: #4d4d4d">mui</a> <a href="/tags/mysql/" style="font-size: 15.2px; color: #666">mysql</a> <a href="/tags/nginx/" style="font-size: 15.2px; color: #666">nginx</a> <a href="/tags/npm/" style="font-size: 14px; color: #808080">npm</a> <a href="/tags/oracle/" style="font-size: 14px; color: #808080">oracle</a> <a href="/tags/react/" style="font-size: 14px; color: #808080">react</a> <a href="/tags/ubuntu/" style="font-size: 18.8px; color: #1a1a1a">ubuntu</a> <a href="/tags/vue/" style="font-size: 17.6px; color: #333">vue</a>
+    </div>
+</div>
+
+
+
+<section class='m_widget categories'>
+    <div class='header'>分类</div>
+    <div class='content'>
+        
+        <ul class="entry">
+            
+            <li><a class="flat-box" href="/categories/linux/">
+                    <div class='name'>linux</div>
+                    <div class='badget'>11</div>
+                </a></li>
+            
+            <li><a class="flat-box" href="/categories/macOS/">
+                    <div class='name'>macOS</div>
+                    <div class='badget'>2</div>
+                </a></li>
+            
+            <li><a class="flat-box" href="/categories/frontend/">
+                    <div class='name'>前端</div>
+                    <div class='badget'>47</div>
+                </a></li>
+            
+            <li><a class="flat-box" href="/categories/backend/">
+                    <div class='name'>后端</div>
+                    <div class='badget'>5</div>
+                </a></li>
+            
+            <li><a class="flat-box" href="/categories/tools/">
+                    <div class='name'>工具</div>
+                    <div class='badget'>2</div>
+                </a></li>
+            
+            <li><a class="flat-box" href="/categories/database/">
+                    <div class='name'>数据库</div>
+                    <div class='badget'>3</div>
+                </a></li>
+            
+            <li><a class="flat-box" href="/categories/algorithm/">
+                    <div class='name'>算法</div>
+                    <div class='badget'>3</div>
+                </a></li>
+            
+            <li><a class="flat-box" href="/categories/editor/">
+                    <div class='name'>编辑器</div>
+                    <div class='badget'>2</div>
+                </a></li>
+            
+        </ul>
+        
+    </div>
+</section>
+
+
+<section class='m_widget friendly-links'>
+    <div class='header'>友情链接</div>
+    <div class='content'>
+        <ul class="entry">
+            
+            <li><a class="flat-box" target="_blank" href="https://gitee.com/fqzhang">
+                    <div class='name'>码云</div>
+                </a></li>
+            
+            <li><a class="flat-box" target="_blank" href="https://github.com/gslnzfq">
+                    <div class='name'>Github</div>
+                </a></li>
+            
+            <li><a class="flat-box" target="_blank" href="https://www.upliveapp.com">
+                    <div class='name'>Up直播主站</div>
+                </a></li>
+            
+            <li><a class="flat-box" target="_blank" href="https://coninup.network">
+                    <div class='name'>CoinUP主站</div>
+                </a></li>
+            
+            <li><a class="flat-box" target="_blank" href="http://taobaofed.org">
+                    <div class='name'>淘宝前端团队</div>
+                </a></li>
+            
+            <li><a class="flat-box" target="_blank" href="https://github.com/gslnzfq/zenbone">
+                    <div class='name'>前端构建工具</div>
+                </a></li>
+            
+        </ul>
+    </div>
+</section>
+
+
+
+        </aside>
+        <script>setLoadingBarProgress(60)</script>
+    </div>
+</div>
+<footer id="footer" class="clearfix">
+    <div class="social-wrapper">
+        
+        
+        <a href="https://github.com/gslnzfq" class="social github"
+           target="_blank" rel="external">
+            <span class="icon icon-github"></span>
+        </a>
+        
+        <a href="https://weibo.com/u/6286882668" class="social sina-weibo"
+           target="_blank" rel="external">
+            <span class="icon icon-sina-weibo"></span>
+        </a>
+        
+        <a href="mailto:zhangfqmail@126.com" class="social mail"
+           target="_blank" rel="external">
+            <span class="icon icon-mail"></span>
+        </a>
+        
+        
+    </div>
+
+    <div>&copy; 2016-2020 强哥. Theme <a
+                href='https://github.com/stkevintan/hexo-theme-material-flow' class="codename">MaterialFlow</a>.
+    </div>
+</footer>
+
+
+<script>setLoadingBarProgress(80)</script>
+
+
+<script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src='//cdn.bootcss.com/node-waves/0.7.5/waves.min.js'></script>
+<!--<script src="//cdn.bootcss.com/scrollReveal.js/3.3.2/scrollreveal.min.js"></script>-->
+<script src="/js/jquery.fitvids.js"></script>
+<script>
+    var GOOGLE_CUSTOM_SEARCH_API_KEY = "";
+    var GOOGLE_CUSTOM_SEARCH_ENGINE_ID = "";
+    var ALGOLIA_API_KEY = "";
+    var ALGOLIA_APP_ID = "";
+    var ALGOLIA_INDEX_NAME = "";
+    var AZURE_SERVICE_NAME = "";
+    var AZURE_INDEX_NAME = "";
+    var AZURE_QUERY_KEY = "";
+    var BAIDU_API_ID = "";
+    var SEARCH_SERVICE = "hexo";
+    var ROOT = "/" || "/";
+    if (!ROOT.endsWith('/')) ROOT += '/';
+</script>
+<script src="/js/search.js"></script>
+<script src="/js/app.js"></script>
+
+
+<script>setLoadingBarProgress(100)</script>
+</body>
+</html>

@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+<!--百度统计-->
+<script>
+    // var _hmt = _hmt || [];
+    // (function () {
+    //     var hm = document.createElement("script");
+    //     hm.src = "https://hm.baidu.com/hm.js?964de0b14aeaff7fd14f418fd4350644";
+    //     var s = document.getElementsByTagName("script")[0];
+    //     s.parentNode.insertBefore(hm, s);
+    // })();
+</script>
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>
+        
+        CentOS单节点安装hadoop |
+        
+        强哥的网站</title>
+    <meta name="description" content="Fed Tech Official Website">
+    <meta name="keywords" content="Github,Hexo,FED,Tech">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="target-densitydpi=device-dpi,user-scalable=no,initial-scale=1,maximum-scale=1, minimum-scale=1">
+    <link rel="shortcut icon" href="https://gitee.com/fqzhang/web-assets/raw/master/uPic/2020/06/avatar-fqyKY9.jpg">
+    <link rel="alternate" href="/atom.xml" title="强哥的网站">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="最近要用到一个hadoop环境，由于资源有限，本文参照官方文档安装了hadoop单节点．参考地址：http://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-common/SingleCluster.html为了方便，本文直接在root下面安装，生产环境不建议使用root账户． 运行环境：  CentOS 6.9 i586 IP:">
+<meta name="keywords" content="hadoop">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CentOS单节点安装hadoop">
+<meta property="og:url" content="/ckilas0g300060xqi1o2ijx6m/index.html">
+<meta property="og:site_name" content="强哥的网站">
+<meta property="og:description" content="最近要用到一个hadoop环境，由于资源有限，本文参照官方文档安装了hadoop单节点．参考地址：http://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-common/SingleCluster.html为了方便，本文直接在root下面安装，生产环境不建议使用root账户． 运行环境：  CentOS 6.9 i586 IP:">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://gitee.com/fqzhang/web-assets/raw/master/uPic/005.png">
+<meta property="og:updated_time" content="2020-12-12T06:07:22.023Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CentOS单节点安装hadoop">
+<meta name="twitter:description" content="最近要用到一个hadoop环境，由于资源有限，本文参照官方文档安装了hadoop单节点．参考地址：http://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-common/SingleCluster.html为了方便，本文直接在root下面安装，生产环境不建议使用root账户． 运行环境：  CentOS 6.9 i586 IP:">
+<meta name="twitter:image" content="https://gitee.com/fqzhang/web-assets/raw/master/uPic/005.png">
+
+    <!--<link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+    <link href='//cdn.bootcss.com/node-waves/0.7.5/waves.min.css' rel='stylesheet'> -->
+    <link rel="stylesheet" href="/style.css">
+
+    
+
+    <script>
+        function setLoadingBarProgress(num) {
+            document.getElementById('loading-bar').style.width = num + "%";
+        }
+    </script>
+</head>
+</html>
+<body>
+<a name="top"></a>
+<div id="loading-bar-wrapper">
+    <div id="loading-bar"></div>
+</div>
+
+
+<script>setLoadingBarProgress(20)</script>
+<header class="l_header">
+    <div class="wrapper container">
+        <a class="logo flat-box" href='/'>
+            强哥的网站
+        </a>
+        <div class='menu'>
+            <ul class='h-list'>
+                
+                <li>
+                    <a class='flat-box nav-home' href='/'>
+                        首页
+                    </a>
+                </li>
+                
+                <li>
+                    <a class='flat-box nav-archives' href='/archives/'>
+                        归档
+                    </a>
+                </li>
+                
+                <li>
+                    <a class='flat-box nav-front' href='/categories/frontend/'>
+                        前端
+                    </a>
+                </li>
+                
+                <li>
+                    <a class='flat-box nav-project' href='/project/'>
+                        项目
+                    </a>
+                </li>
+                
+            </ul>
+            <div class='underline'></div>
+        </div>
+        
+        <div class="m_search">
+            <form name="searchform" class="form u-search-form">
+                <input type="text" class="input u-search-input" placeholder="输入关键字"/>
+                <span class="icon icon-search"></span>
+            </form>
+        </div>
+        
+        <ul class='switcher h-list'>
+            
+            <li class='s-search'><a href='javascript:void(0)'><span class="icon icon-search"></span></a></li>
+            
+            <li class='s-menu'><a href='javascript:void(0)'><span class="icon icon-menu"></span></a></li>
+        </ul>
+    </div>
+    <aside class="menu-phone">
+        <nav>
+            
+            <a href="/" class="nav-home nav">
+                首页
+            </a>
+            
+            <a href="/archives/" class="nav-archives nav">
+                归档
+            </a>
+            
+            <a href="/categories/frontend/" class="nav-front nav">
+                前端
+            </a>
+            
+            <a href="/project/" class="nav-project nav">
+                项目
+            </a>
+            
+        </nav>
+    </aside>
+</header>
+
+<script>setLoadingBarProgress(40)</script>
+<div class="l_body">
+    <a name="top_app"></a>
+    <div class='container'>
+        <div class='l_main'>
+            <article
+  id="post-CentOS单节点安装hadoop"
+  class="post white-box article-type-post"
+  itemscope
+  itemprop="blogPost"
+>
+  <a target="_blank" class="edit-article" href="https://github.com/gslnzfq/blog-src/edit/master/source/_posts/CentOS单节点安装hadoop.md">编辑</a>
+  <section class="meta">
+    <h2 class="title">
+      <a href="/ckilas0g300060xqi1o2ijx6m/">
+        CentOS单节点安装hadoop
+      </a>
+    </h2>
+    
+
+<div class='cats'>
+    <a href="/categories/backend/">后端</a>
+</div>
+
+  </section>
+  
+  <section class="tog"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#下载apache-hadoop"><span class="toc-number">1.</span> <span class="toc-text">下载apache hadoop</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装系统必备的组件"><span class="toc-number">2.</span> <span class="toc-text">安装系统必备的组件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#配置linux免密码ssh登录"><span class="toc-number">3.</span> <span class="toc-text">配置linux免密码ssh登录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装jdk1-8并做相关的配置"><span class="toc-number">4.</span> <span class="toc-text">安装jdk1.8并做相关的配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装hadoop并配置"><span class="toc-number">5.</span> <span class="toc-text">安装hadoop并配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用webhdfs查看文件系统（如果访问不到，请查看防火墙是否允许50070端口）"><span class="toc-number">6.</span> <span class="toc-text">使用webhdfs查看文件系统（如果访问不到，请查看防火墙是否允许50070端口）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#其他问题"><span class="toc-number">7.</span> <span class="toc-text">其他问题</span></a></li></ol></section>
+  
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      <p>最近要用到一个hadoop环境，由于资源有限，本文参照官方文档安装了hadoop单节点．<br>参考地址：<a href="http://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-common/SingleCluster.html" target="_blank" rel="noopener">http://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-common/SingleCluster.html</a><br><strong>为了方便，本文直接在root下面安装，生产环境不建议使用root账户．</strong></p>
+<p>运行环境：</p>
+<ol>
+<li>CentOS 6.9 i586</li>
+<li>IP: 192.168.1.20</li>
+</ol>
+<a id="more"></a>
+<p>下面分为下面几个步骤完成</p>
+<ol>
+<li><a href="#0">下载apache hadoop</a></li>
+<li><a href="#1">安装系统必备的组件</a></li>
+<li><a href="#2">配置linux免密码ssh登录</a></li>
+<li><a href="#3">安装jdk1.8并做相关的配置</a></li>
+<li><a href="#4">安装hadoop并配置</a></li>
+<li><a href="#5">使用webhdfs查看文件系统</a></li>
+</ol>
+<p><a name="0"></a></p>
+<h3 id="下载apache-hadoop"><a href="#下载apache-hadoop" class="headerlink" title="下载apache hadoop"></a>下载apache hadoop</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 如果显示 -bash: wget: command not found 请执行 yum install wget　安装</span></span><br><span class="line">wget http://mirrors.hust.edu.cn/apache/hadoop/common/hadoop-2.8.1/hadoop-2.8.1.tar.gz</span><br><span class="line"><span class="comment"># 我习惯把自己安装的软件放在opt下面，如果移动失败，可能没有权限，请切换到root执行：chmod 777 -R /opt/</span></span><br><span class="line">mv hadoop-2.8.1.tar.gz /opt/</span><br></pre></td></tr></table></figure>
+<p><a name="1"></a></p>
+<h3 id="安装系统必备的组件"><a href="#安装系统必备的组件" class="headerlink" title="安装系统必备的组件"></a>安装系统必备的组件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">yum install ssh rsync</span><br><span class="line"><span class="comment"># 下载完成后，请使用下面的命令测试</span></span><br><span class="line">ssh</span><br><span class="line"><span class="comment"># 显示下面类似的结果，说明安装成功</span></span><br><span class="line">usage: ssh [-1246AaCfgKkMNnqsTtVvXxYy] [-b bind_address] [-c cipher_spec]</span><br><span class="line">           [-D [bind_address:]port] [-e escape_char] [-F configfile]</span><br><span class="line">           [-I pkcs11] [-i identity_file]</span><br><span class="line">           [-L [bind_address:]port:host:hostport]</span><br><span class="line">           [-l login_name] [-m mac_spec] [-O ctl_cmd] [-o option] [-p port]</span><br><span class="line">           [-R [bind_address:]port:host:hostport] [-S ctl_path]</span><br><span class="line">           [-W host:port] [-w local_tun[:remote_tun]]</span><br><span class="line">           [user@]hostname [<span class="built_in">command</span>]</span><br></pre></td></tr></table></figure>
+<p><a name="2"></a></p>
+<h3 id="配置linux免密码ssh登录"><a href="#配置linux免密码ssh登录" class="headerlink" title="配置linux免密码ssh登录"></a>配置linux免密码ssh登录</h3><p>使用下面的，生成ssh公私密钥<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 一路回车就好了，其实我也是新手　*_*</span></span><br><span class="line">ssh-keygen -t rsa</span><br><span class="line"><span class="comment"># 执行效果是这样子的</span></span><br><span class="line">Generating public/private rsa key pair.</span><br><span class="line">Enter file <span class="keyword">in</span> <span class="built_in">which</span> to save the key (/root/.ssh/id_rsa): </span><br><span class="line">Created directory <span class="string">'/root/.ssh'</span>.</span><br><span class="line">Enter passphrase (empty <span class="keyword">for</span> no passphrase): </span><br><span class="line">Enter same passphrase again: </span><br><span class="line">Your identification has been saved <span class="keyword">in</span> /root/.ssh/id_rsa.</span><br><span class="line">Your public key has been saved <span class="keyword">in</span> /root/.ssh/id_rsa.pub.</span><br><span class="line">The key fingerprint is:</span><br><span class="line">d6:b9:15:d5:3f:0b:01:f6:f4:3f:04:9b:9d:bc:07:01 root@linux32</span><br><span class="line">The key<span class="string">'s randomart image is:</span></span><br><span class="line"><span class="string">+--[ RSA 2048]----+</span></span><br><span class="line"><span class="string">|           oE+o. |</span></span><br><span class="line"><span class="string">|          . ooB.o|</span></span><br><span class="line"><span class="string">|            .+o*.|</span></span><br><span class="line"><span class="string">|         . . o.o+|</span></span><br><span class="line"><span class="string">|        S o . .o=|</span></span><br><span class="line"><span class="string">|       .   o   .o|</span></span><br><span class="line"><span class="string">|          .      |</span></span><br><span class="line"><span class="string">|                 |</span></span><br><span class="line"><span class="string">|                 |</span></span><br><span class="line"><span class="string">+-----------------+</span></span><br></pre></td></tr></table></figure></p>
+<p>查看<code>~/.ssh</code>下面已经生成了id_rsa和id_rsa.pub文件，前者是私钥匙，后者是公钥，现在开始授权自动登录<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#在.ssh目录下执行</span></span><br><span class="line">cat id_rsa.pub &gt;&gt; authorized_keys</span><br><span class="line"><span class="comment">#给authorized_keys设置权限，这个很重要的</span></span><br><span class="line">chmod 600 authorized_keys</span><br></pre></td></tr></table></figure></p>
+<p>使用ssh连接自己测试，不需要输入密码就可以登录进去了，第一次可能会有一个提问，输入yes回车即可<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh localhost</span><br></pre></td></tr></table></figure></p>
+<p><a name="3"></a></p>
+<h3 id="安装jdk1-8并做相关的配置"><a href="#安装jdk1-8并做相关的配置" class="headerlink" title="安装jdk1.8并做相关的配置"></a>安装jdk1.8并做相关的配置</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#将jdk解压到jdk1.8.0_144,然后添加环境变量</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"export JAVA_HOME=/opt/jdk1.8.0_144"</span> &gt;&gt; /etc/profile</span><br></pre></td></tr></table></figure>
+<p><a name="4"></a></p>
+<h3 id="安装hadoop并配置"><a href="#安装hadoop并配置" class="headerlink" title="安装hadoop并配置"></a>安装hadoop并配置</h3><p>设置环境变量<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#将hadoop解压到hadoop-2.8.1文件夹</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"export HADOOP_HOME=/opt/hadoop-2.8.1"</span> &gt;&gt; /etc/profile</span><br><span class="line"><span class="comment">#导出PATH变量</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"export PATH=\$PATH:\$JAVA_HOME/bin:\$HADOOP_HOME/bin:\$HADOOP_HOME/sbin"</span> &gt;&gt; /etc/profile</span><br><span class="line"><span class="comment">#刷新环境变量</span></span><br><span class="line"><span class="built_in">source</span> /etc/profile</span><br></pre></td></tr></table></figure></p>
+<p>修改<code>$HADOOP_HOME/etc/hadoop/hadoop-env.sh</code>中的JAVA_HOME指向，修改为本机的JAVA_HOME，大约是25行左右<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export JAVA_HOME=/opt/jdk1.8.0_144</span><br></pre></td></tr></table></figure></p>
+<p>配置单节点，修改<code>$HADOOP_HOME/etc/hadoop/core-site.xml</code>,追加下面的配置<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">name</span>&gt;</span>fs.defaultFS<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">value</span>&gt;</span>hdfs://192.168.1.20:9000<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--需要在/opt/hadoop-2.8.1手动创建hadoop_tmp--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">name</span>&gt;</span>hadoop.tmp.dir<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">value</span>&gt;</span>/opt/hadoop-2.8.1/hadoop_tmp<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">description</span>&gt;</span>A base for other temporary directories.<span class="tag">&lt;/<span class="name">description</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>修改<code>$HADOOP_HOME/etc/hadoop/hdfs-site.xml</code>,追加下面的配置<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">name</span>&gt;</span>dfs.replication<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">value</span>&gt;</span>1<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>使用下面的命令格式化文件系统并启动hdfs,启动之前必须在/etc/hosts中绑定主机名，否则会启动失败<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#添加映射,我的主机名是linux32</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"192.168.1.20 linux32"</span>　&gt;&gt; /etc/hosts &amp;&amp; service network restart</span><br><span class="line">hdfs namenode -format</span><br><span class="line">start-dfs.sh</span><br><span class="line"><span class="comment">#启动成功了，使用jps检查是否成功</span></span><br><span class="line">2609 SecondaryNameNode</span><br><span class="line">2453 DataNode</span><br><span class="line">2332 NameNode</span><br><span class="line">2717 Jps</span><br></pre></td></tr></table></figure></p>
+<p><a name="5"></a></p>
+<h3 id="使用webhdfs查看文件系统（如果访问不到，请查看防火墙是否允许50070端口）"><a href="#使用webhdfs查看文件系统（如果访问不到，请查看防火墙是否允许50070端口）" class="headerlink" title="使用webhdfs查看文件系统（如果访问不到，请查看防火墙是否允许50070端口）"></a>使用webhdfs查看文件系统（如果访问不到，请查看防火墙是否允许50070端口）</h3><p><img src="https://gitee.com/fqzhang/web-assets/raw/master/uPic/005.png" alt="webhdfs展示"></p>
+<h3 id="其他问题"><a href="#其他问题" class="headerlink" title="其他问题"></a>其他问题</h3><p>1、You have loaded library /opt/hadoop-2.8.1/lib/native/libhadoop.so.1.0.0 which might have disabled stack guard. The VM will try to fix the stack guard now</p>
+<p><a href="http://www.linuxidc.com/Linux/2014-04/100934p3.htm" target="_blank" rel="noopener">http://www.linuxidc.com/Linux/2014-04/100934p3.htm</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">在hadoop-env.sh和yarn-env.sh中添加如下两行：</span><br><span class="line">export HADOOP_COMMON_LIB_NATIVE_DIR=$&#123;HADOOP_PREFIX&#125;/lib/native</span><br><span class="line">export HADOOP_OPTS=&quot;-Djava.library.path=$HADOOP_PREFIX/lib&quot;</span><br></pre></td></tr></table></figure>
+<p>2、namenode没有办法启动</p>
+<p>最近遇到了一个问题，执行start-all.sh的时候发现JPS一下namenode没有启动</p>
+<p>每次开机都得重新格式化一下namenode才可以</p>
+<p>其实问题就出在tmp文件，默认的tmp文件每次重新开机会被清空，与此同时namenode的格式化信息就会丢失</p>
+<p>于是我们得重新配置一个tmp文件目录</p>
+<p>首先在home目录下建立一个hadoop_tmp目录</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mkdir ~/hadoop_tmp</span><br></pre></td></tr></table></figure>
+<p>然后修改hadoop/conf目录里面的core-site.xml文件，加入以下节点：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>hadoop.tmp.dir<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">value</span>&gt;</span>/home/chjzh/hadoop_tmp<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">description</span>&gt;</span>A base for other temporary directories.<span class="tag">&lt;/<span class="name">description</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>注意：我的用户是chjzh所以目录是/home/chjzh/hadoop_tmp</p>
+<p>OK了，重新格式化Namenode<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hadoop namenode -format</span><br></pre></td></tr></table></figure></p>
+<p>然后启动hadoop<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">start-all.sh</span><br></pre></td></tr></table></figure></p>
+<p>执行下JPS命令就可以看到NameNode了</p>
+
+    </div>
+    <!-- 循环显示所有的tags -->
+    
+    <div class="article-tags tags">
+      
+      <a href="/tags/hadoop/">hadoop</a>
+      
+    </div>
+    
+  </section>
+  <div class="copyright-block">
+    <p>- 复制请标明出处 -</p>
+    <p>撰写时间：2017年03月22日</p>
+    <p>
+      联系方式：<a href="mailto:zhangfqmail@126.com">zhangfqmail@126.com</a>
+    </p>
+    <p>
+      本文链接：<a
+        href="http://gslnzfq.github.io/ckilas0g300060xqi1o2ijx6m/"
+        target="_blank"
+        >CentOS单节点安装hadoop</a
+      >
+    </p>
+  </div>
+  
+</article>
+
+        </div>
+        <aside class='l_side'>
+            
+<section class='m_widget about'>
+    
+    <a href="/about"><img class='avatar waves-image' src='https://gitee.com/fqzhang/web-assets/raw/master/uPic/2020/06/avatar-fqyKY9.jpg'/></a>
+    
+    <div class='header'>强哥</div>
+    <div class='content'>
+        <div>前端工程师5年,技术框架/工具爱好者</div>
+    </div>
+</section>
+
+
+
+<div class="m_widget tagcloud">
+    <div class="header">标签</div>
+    <div class='content'>
+        <a href="/tags/Webstorm/" style="font-size: 14px; color: #808080">Webstorm</a> <a href="/tags/angularjs/" style="font-size: 15.2px; color: #666">angularjs</a> <a href="/tags/centos/" style="font-size: 18.8px; color: #1a1a1a">centos</a> <a href="/tags/css/" style="font-size: 18.8px; color: #1a1a1a">css</a> <a href="/tags/docker/" style="font-size: 15.2px; color: #666">docker</a> <a href="/tags/git/" style="font-size: 14px; color: #808080">git</a> <a href="/tags/hadoop/" style="font-size: 14px; color: #808080">hadoop</a> <a href="/tags/java/" style="font-size: 15.2px; color: #666">java</a> <a href="/tags/javascript/" style="font-size: 20px; color: #000">javascript</a> <a href="/tags/mixpanel/" style="font-size: 14px; color: #808080">mixpanel</a> <a href="/tags/mui/" style="font-size: 16.4px; color: #4d4d4d">mui</a> <a href="/tags/mysql/" style="font-size: 15.2px; color: #666">mysql</a> <a href="/tags/nginx/" style="font-size: 15.2px; color: #666">nginx</a> <a href="/tags/npm/" style="font-size: 14px; color: #808080">npm</a> <a href="/tags/oracle/" style="font-size: 14px; color: #808080">oracle</a> <a href="/tags/react/" style="font-size: 14px; color: #808080">react</a> <a href="/tags/ubuntu/" style="font-size: 18.8px; color: #1a1a1a">ubuntu</a> <a href="/tags/vue/" style="font-size: 17.6px; color: #333">vue</a>
+    </div>
+</div>
+
+
+
+<section class='m_widget categories'>
+    <div class='header'>分类</div>
+    <div class='content'>
+        
+        <ul class="entry">
+            
+            <li><a class="flat-box" href="/categories/linux/">
+                    <div class='name'>linux</div>
+                    <div class='badget'>11</div>
+                </a></li>
+            
+            <li><a class="flat-box" href="/categories/macOS/">
+                    <div class='name'>macOS</div>
+                    <div class='badget'>2</div>
+                </a></li>
+            
+            <li><a class="flat-box" href="/categories/frontend/">
+                    <div class='name'>前端</div>
+                    <div class='badget'>47</div>
+                </a></li>
+            
+            <li><a class="flat-box" href="/categories/backend/">
+                    <div class='name'>后端</div>
+                    <div class='badget'>5</div>
+                </a></li>
+            
+            <li><a class="flat-box" href="/categories/tools/">
+                    <div class='name'>工具</div>
+                    <div class='badget'>2</div>
+                </a></li>
+            
+            <li><a class="flat-box" href="/categories/database/">
+                    <div class='name'>数据库</div>
+                    <div class='badget'>3</div>
+                </a></li>
+            
+            <li><a class="flat-box" href="/categories/algorithm/">
+                    <div class='name'>算法</div>
+                    <div class='badget'>3</div>
+                </a></li>
+            
+            <li><a class="flat-box" href="/categories/editor/">
+                    <div class='name'>编辑器</div>
+                    <div class='badget'>2</div>
+                </a></li>
+            
+        </ul>
+        
+    </div>
+</section>
+
+
+<section class='m_widget friendly-links'>
+    <div class='header'>友情链接</div>
+    <div class='content'>
+        <ul class="entry">
+            
+            <li><a class="flat-box" target="_blank" href="https://gitee.com/fqzhang">
+                    <div class='name'>码云</div>
+                </a></li>
+            
+            <li><a class="flat-box" target="_blank" href="https://github.com/gslnzfq">
+                    <div class='name'>Github</div>
+                </a></li>
+            
+            <li><a class="flat-box" target="_blank" href="https://www.upliveapp.com">
+                    <div class='name'>Up直播主站</div>
+                </a></li>
+            
+            <li><a class="flat-box" target="_blank" href="https://coninup.network">
+                    <div class='name'>CoinUP主站</div>
+                </a></li>
+            
+            <li><a class="flat-box" target="_blank" href="http://taobaofed.org">
+                    <div class='name'>淘宝前端团队</div>
+                </a></li>
+            
+            <li><a class="flat-box" target="_blank" href="https://github.com/gslnzfq/zenbone">
+                    <div class='name'>前端构建工具</div>
+                </a></li>
+            
+        </ul>
+    </div>
+</section>
+
+
+
+        </aside>
+        <script>setLoadingBarProgress(60)</script>
+    </div>
+</div>
+<footer id="footer" class="clearfix">
+    <div class="social-wrapper">
+        
+        
+        <a href="https://github.com/gslnzfq" class="social github"
+           target="_blank" rel="external">
+            <span class="icon icon-github"></span>
+        </a>
+        
+        <a href="https://weibo.com/u/6286882668" class="social sina-weibo"
+           target="_blank" rel="external">
+            <span class="icon icon-sina-weibo"></span>
+        </a>
+        
+        <a href="mailto:zhangfqmail@126.com" class="social mail"
+           target="_blank" rel="external">
+            <span class="icon icon-mail"></span>
+        </a>
+        
+        
+    </div>
+
+    <div>&copy; 2016-2020 强哥. Theme <a
+                href='https://github.com/stkevintan/hexo-theme-material-flow' class="codename">MaterialFlow</a>.
+    </div>
+</footer>
+
+
+<script>setLoadingBarProgress(80)</script>
+
+
+<script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src='//cdn.bootcss.com/node-waves/0.7.5/waves.min.js'></script>
+<!--<script src="//cdn.bootcss.com/scrollReveal.js/3.3.2/scrollreveal.min.js"></script>-->
+<script src="/js/jquery.fitvids.js"></script>
+<script>
+    var GOOGLE_CUSTOM_SEARCH_API_KEY = "";
+    var GOOGLE_CUSTOM_SEARCH_ENGINE_ID = "";
+    var ALGOLIA_API_KEY = "";
+    var ALGOLIA_APP_ID = "";
+    var ALGOLIA_INDEX_NAME = "";
+    var AZURE_SERVICE_NAME = "";
+    var AZURE_INDEX_NAME = "";
+    var AZURE_QUERY_KEY = "";
+    var BAIDU_API_ID = "";
+    var SEARCH_SERVICE = "hexo";
+    var ROOT = "/" || "/";
+    if (!ROOT.endsWith('/')) ROOT += '/';
+</script>
+<script src="/js/search.js"></script>
+<script src="/js/app.js"></script>
+
+
+<script>setLoadingBarProgress(100)</script>
+</body>
+</html>

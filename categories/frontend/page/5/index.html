@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html>
+<!--百度统计-->
+<script>
+    // var _hmt = _hmt || [];
+    // (function () {
+    //     var hm = document.createElement("script");
+    //     hm.src = "https://hm.baidu.com/hm.js?964de0b14aeaff7fd14f418fd4350644";
+    //     var s = document.getElementsByTagName("script")[0];
+    //     s.parentNode.insertBefore(hm, s);
+    // })();
+</script>
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>
+        
+        强哥的网站</title>
+    <meta name="description" content="Fed Tech Official Website">
+    <meta name="keywords" content="Github,Hexo,FED,Tech">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="target-densitydpi=device-dpi,user-scalable=no,initial-scale=1,maximum-scale=1, minimum-scale=1">
+    <link rel="shortcut icon" href="https://gitee.com/fqzhang/web-assets/raw/master/uPic/2020/06/avatar-fqyKY9.jpg">
+    <link rel="alternate" href="/atom.xml" title="强哥的网站">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Fed Tech Official Website">
+<meta name="keywords" content="Github,Hexo,FED,Tech">
+<meta property="og:type" content="website">
+<meta property="og:title" content="强哥的网站">
+<meta property="og:url" content="/categories/frontend/page/5/index.html">
+<meta property="og:site_name" content="强哥的网站">
+<meta property="og:description" content="Fed Tech Official Website">
+<meta property="og:locale" content="zh-CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="强哥的网站">
+<meta name="twitter:description" content="Fed Tech Official Website">
+
+    <!--<link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+    <link href='//cdn.bootcss.com/node-waves/0.7.5/waves.min.css' rel='stylesheet'> -->
+    <link rel="stylesheet" href="/style.css">
+
+    
+
+    <script>
+        function setLoadingBarProgress(num) {
+            document.getElementById('loading-bar').style.width = num + "%";
+        }
+    </script>
+</head>
+</html>
+<body>
+<a name="top"></a>
+<div id="loading-bar-wrapper">
+    <div id="loading-bar"></div>
+</div>
+
+
+<script>setLoadingBarProgress(20)</script>
+<header class="l_header">
+    <div class="wrapper container">
+        <a class="logo flat-box" href='/'>
+            强哥的网站
+        </a>
+        <div class='menu'>
+            <ul class='h-list'>
+                
+                <li>
+                    <a class='flat-box nav-home' href='/'>
+                        首页
+                    </a>
+                </li>
+                
+                <li>
+                    <a class='flat-box nav-archives' href='/archives/'>
+                        归档
+                    </a>
+                </li>
+                
+                <li>
+                    <a class='flat-box nav-front' href='/categories/frontend/'>
+                        前端
+                    </a>
+                </li>
+                
+                <li>
+                    <a class='flat-box nav-project' href='/project/'>
+                        项目
+                    </a>
+                </li>
+                
+            </ul>
+            <div class='underline'></div>
+        </div>
+        
+        <div class="m_search">
+            <form name="searchform" class="form u-search-form">
+                <input type="text" class="input u-search-input" placeholder="输入关键字"/>
+                <span class="icon icon-search"></span>
+            </form>
+        </div>
+        
+        <ul class='switcher h-list'>
+            
+            <li class='s-search'><a href='javascript:void(0)'><span class="icon icon-search"></span></a></li>
+            
+            <li class='s-menu'><a href='javascript:void(0)'><span class="icon icon-menu"></span></a></li>
+        </ul>
+    </div>
+    <aside class="menu-phone">
+        <nav>
+            
+            <a href="/" class="nav-home nav">
+                首页
+            </a>
+            
+            <a href="/archives/" class="nav-archives nav">
+                归档
+            </a>
+            
+            <a href="/categories/frontend/" class="nav-front nav">
+                前端
+            </a>
+            
+            <a href="/project/" class="nav-project nav">
+                项目
+            </a>
+            
+        </nav>
+    </aside>
+</header>
+
+<script>setLoadingBarProgress(40)</script>
+<div class="l_body">
+    <a name="top_app"></a>
+    <div class='container'>
+        <div class='l_main'>
+            
+<section class="post-list">
+    
+        <div class='post-wrapper'>
+            <article class="post reveal ">
+    <section class="meta">
+        
+        <h2 class="title">
+            <a href="/ckilas0hu00330xqihsjr9ply/">
+                js获取最近一周的时间
+            </a>
+        </h2>
+        
+        <time>
+            2017年05月07日
+        </time>
+        
+
+<div class='cats'>
+    <a href="/categories/frontend/">前端</a>
+</div>
+
+    </section>
+    <section class="article typo">
+        <p>JavaScript中时间的表现形式有:<code>Number,String,Date</code>,都可以使用<code>new Date()</code>转化成标准的<code>Date</code>类型.</p>
+<p>下面我介绍一种Number类型时间的计算方式,Number类型的时间是以毫秒的形式存储的,换算如下:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1s = 1000ms  // 1秒=1000毫秒</span><br><span class="line">1m = 60s     // 1分钟=60秒</span><br><span class="line">1h = 60m     // 1小时=60秒</span><br><span class="line">1d = 24h     // 1天=24小时</span><br></pre></td></tr></table></figure></p>
+        
+        <div class="readmore">
+            <a href="/ckilas0hu00330xqihsjr9ply/">阅读全文</a>
+        </div>
+        
+
+        
+        <div class="full-width auto-padding tags">
+            
+            <a href="/tags/javascript/">javascript</a>
+            
+        </div>
+        
+    </section>
+</article>
+
+        </div>
+    
+        <div class='post-wrapper'>
+            <article class="post reveal ">
+    <section class="meta">
+        
+        <h2 class="title">
+            <a href="/ckilas0il004t0xqi844oxihv/">
+                使用js写一个日期格式化函数
+            </a>
+        </h2>
+        
+        <time>
+            2017年05月03日
+        </time>
+        
+
+<div class='cats'>
+    <a href="/categories/frontend/">前端</a>
+</div>
+
+    </section>
+    <section class="article typo">
+        <p>有时候我们需要对时间做一下格式化,例如:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Wed May 03 2017 22:33:22 GMT+0800 (CST)  =&gt;  2017/05/03</span><br><span class="line">1493822039042  =&gt; 2017/05/03 22:33</span><br></pre></td></tr></table></figure></p>
+<p>下面我们就定制一个可以格式化时间的函数<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@description </span>不满两位的填充0</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="variable">v</span></span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@returns <span class="type">&#123;string&#125;</span></span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fillStr</span>(<span class="params">v</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> v &lt; <span class="number">10</span> ? <span class="string">'0'</span> + v : v;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 格式化时间</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param </span>d  时间</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param </span>patten  格式文本   y 年；M 月；d 日；H 小时；m 分钟；s 秒；</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@returns <span class="type">&#123;string&#125;</span>  </span>格式化以后的实践</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">formatDate</span>(<span class="params">d, patten</span>) </span>&#123;</span><br><span class="line">    patten = patten || <span class="string">'y-M-d H:m:s'</span>;</span><br><span class="line">    <span class="keyword">var</span> date = d ? <span class="keyword">new</span> <span class="built_in">Date</span>(d) : <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line">    <span class="keyword">return</span> patten.replace(<span class="regexp">/y/g</span>, date.getFullYear())</span><br><span class="line">        .replace(<span class="regexp">/M/g</span>, fillStr(date.getMonth() + <span class="number">1</span>))</span><br><span class="line">        .replace(<span class="regexp">/d/g</span>, fillStr(date.getDate()))</span><br><span class="line">        .replace(<span class="regexp">/H/g</span>, fillStr(date.getHours()))</span><br><span class="line">        .replace(<span class="regexp">/m/g</span>, fillStr(date.getMinutes()))</span><br><span class="line">        .replace(<span class="regexp">/s/g</span>, fillStr(date.getSeconds()));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>下面是使用方法和返回的结果<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// usage</span></span><br><span class="line">formatDate(<span class="keyword">new</span> <span class="built_in">Date</span>(),<span class="string">'y年M月d日'</span>);  <span class="comment">// 2017年05月03日</span></span><br><span class="line">formatDate(<span class="keyword">new</span> <span class="built_in">Date</span>()); <span class="comment">// 2017-05-03 22:47:56</span></span><br></pre></td></tr></table></figure></p>
+
+        
+
+        
+        <div class="full-width auto-padding tags">
+            
+            <a href="/tags/javascript/">javascript</a>
+            
+        </div>
+        
+    </section>
+</article>
+
+        </div>
+    
+        <div class='post-wrapper'>
+            <article class="post reveal ">
+    <section class="meta">
+        
+        <h2 class="title">
+            <a href="/ckilas0j3005l0xqifbra5rfe/">
+                动态加载js和css文件，抽时间优化
+            </a>
+        </h2>
+        
+        <time>
+            2017年04月22日
+        </time>
+        
+
+<div class='cats'>
+    <a href="/categories/frontend/">前端</a>
+</div>
+
+    </section>
+    <section class="article typo">
+        <p>其实下面就做了一个类似require.js的实现；</p>
+<p>有的场景我们需要把一些库封装起来，对外提供一个名字去加载，这样做的目的就是将库和页面分开，页面不直接依赖于库的某一个文件，只需要知道库的名字就可以了；</p>
+<p>1、 首先我们需要定义一个库对应的js和css文件<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> libs = &#123;</span><br><span class="line">    echarts: &#123;</span><br><span class="line">        js: [<span class="string">'js/libs/echarts.min.js'</span>, <span class="string">'js/echarts-utils.js'</span>]</span><br><span class="line">    &#125;,</span><br><span class="line">    picker: &#123;</span><br><span class="line">        js: [<span class="string">'js/libs/mui.picker.js'</span>, <span class="string">'js/libs/mui.poppicker.js'</span>],</span><br><span class="line">        css: [<span class="string">'css/mui.picker.css'</span>, <span class="string">'css/mui.poppicker.css'</span>]</span><br><span class="line">    &#125;,</span><br><span class="line">    sceneHeader: &#123;</span><br><span class="line">        js: [<span class="string">'js/element/scene-header.js'</span>]</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+        
+        <div class="readmore">
+            <a href="/ckilas0j3005l0xqifbra5rfe/">阅读全文</a>
+        </div>
+        
+
+        
+        <div class="full-width auto-padding tags">
+            
+            <a href="/tags/javascript/">javascript</a>
+            
+        </div>
+        
+    </section>
+</article>
+
+        </div>
+    
+        <div class='post-wrapper'>
+            <article class="post reveal ">
+    <section class="meta">
+        
+        <h2 class="title">
+            <a href="/ckilas0i4003q0xqir4fyzqrp/">
+                mui中使用vue遇到的各种问题
+            </a>
+        </h2>
+        
+        <time>
+            2017年04月19日
+        </time>
+        
+
+<div class='cats'>
+    <a href="/categories/frontend/">前端</a>
+</div>
+
+    </section>
+    <section class="article typo">
+        <p>1、 把mui.init写到vue程序的mounted钩子上.</p>
+<blockquote>
+<p>因为vue代理了dom，dom没有初始化，所以mui.init的时候没有找到dom，就没有效果。</p>
+</blockquote>
+<p>2、 定义vue组件时，所有的属性必须是小写.</p>
+<blockquote>
+<p>组件中定义的属性是 aaBb 在标签上绑定的时候使用 aa-bb绑定，如果显示小写就是全小写</p>
+</blockquote>
+        
+        <div class="readmore">
+            <a href="/ckilas0i4003q0xqir4fyzqrp/">阅读全文</a>
+        </div>
+        
+
+        
+        <div class="full-width auto-padding tags">
+            
+            <a href="/tags/mui/">mui</a>
+            
+        </div>
+        
+    </section>
+</article>
+
+        </div>
+    
+        <div class='post-wrapper'>
+            <article class="post reveal ">
+    <section class="meta">
+        
+        <h2 class="title">
+            <a href="/ckilas0gj000m0xqi9m4wjv4q/">
+                JS生成随机数
+            </a>
+        </h2>
+        
+        <time>
+            2017年03月22日
+        </time>
+        
+
+<div class='cats'>
+    <a href="/categories/frontend/">前端</a>
+</div>
+
+    </section>
+    <section class="article typo">
+        <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 如果你希望生成任意值到任意值的随机数，公式就是这样的：</span></span><br><span class="line"><span class="comment">// max - 期望的最大值</span></span><br><span class="line"><span class="comment">// min - 期望的最小值</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="built_in">Math</span>.random()*(max-min+<span class="number">1</span>)+min,<span class="number">10</span>);</span><br><span class="line"><span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random()*(max-min+<span class="number">1</span>)+min);</span><br></pre></td></tr></table></figure>
+
+        
+
+        
+        <div class="full-width auto-padding tags">
+            
+            <a href="/tags/javascript/">javascript</a>
+            
+        </div>
+        
+    </section>
+</article>
+
+        </div>
+    
+        <div class='post-wrapper'>
+            <article class="post reveal ">
+    <section class="meta">
+        
+        <h2 class="title">
+            <a href="/ckilas0fq00000xqicvebq2kd/">
+                AngularJS中$http服务在IE中缓存处理
+            </a>
+        </h2>
+        
+        <time>
+            2017年03月21日
+        </time>
+        
+
+<div class='cats'>
+    <a href="/categories/frontend/">前端</a>
+</div>
+
+    </section>
+    <section class="article typo">
+        <p>我们在项目中会很频繁的用到获取实时数据的形式展示界面，由于每次请求的url，参数都是一样的，在ie中就出现了缓存下来的问题。</p>
+<p>下面我们通过配置$httpProvider修改默认的$http请求。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">app.config([<span class="string">'$httpProvider'</span>,<span class="function"><span class="keyword">function</span> (<span class="params">$httpProvider</span>) </span>&#123;</span><br><span class="line">     <span class="comment">// 初始化$httpProvider的get请求配置</span></span><br><span class="line">     $httpProvider.defaults.headers.get = $httpProvider.defaults.headers.get || &#123;&#125;;</span><br><span class="line"></span><br><span class="line">     <span class="comment">// 修改请求默认值，不允许缓存</span></span><br><span class="line">     $httpProvider.defaults.headers.get[<span class="string">'Cache-Control'</span>] = <span class="string">'no-cache'</span>;</span><br><span class="line">     $httpProvider.defaults.headers.get[<span class="string">'Pragma'</span>] = <span class="string">'no-cache'</span>;</span><br><span class="line"> &#125;]);</span><br></pre></td></tr></table></figure>
+<p>再次在ie浏览器运行，相同的参数，每次获取的数据都是不一样的了，说明我们的配置生效了。</p>
+<p>当然我们可以在所有的<strong>get请求后面拼接时间戳参数</strong>，来保证每次的请求都是不同的。</p>
+
+        
+
+        
+        <div class="full-width auto-padding tags">
+            
+            <a href="/tags/angularjs/">angularjs</a>
+            
+        </div>
+        
+    </section>
+</article>
+
+        </div>
+    
+        <div class='post-wrapper'>
+            <article class="post reveal ">
+    <section class="meta">
+        
+        <h2 class="title">
+            <a href="/ckilas0ie004c0xqije66g4y8/">
+                white-space处理断行
+            </a>
+        </h2>
+        
+        <time>
+            2017年03月20日
+        </time>
+        
+
+<div class='cats'>
+    <a href="/categories/frontend/">前端</a>
+</div>
+
+    </section>
+    <section class="article typo">
+        <h2 id="white-space"><a href="#white-space" class="headerlink" title="white-space"></a>white-space</h2><p>空白的处理方式，不止两个属性值，但在 IE6 中只支持这两个，所以不介绍其他的。</p>
+<ul>
+<li>normal 多个连续英文空格压缩为一个英文空格显示，在空白处可换行。  </li>
+<li>nowrap 强制在同一行内显示所有文本，直到文本结束或者遭遇 br 对象。</li>
+</ul>
+        
+        <div class="readmore">
+            <a href="/ckilas0ie004c0xqije66g4y8/">阅读全文</a>
+        </div>
+        
+
+        
+        <div class="full-width auto-padding tags">
+            
+            <a href="/tags/css/">css</a>
+            
+        </div>
+        
+    </section>
+</article>
+
+        </div>
+    
+</section>
+
+
+    <nav id="page-nav">
+        
+            <a class="prev" rel="prev" href="/categories/frontend/page/4/">
+                <span class="icon icon-chevron-left"></span>
+                <span class="text">上一页</span>
+            </a>
+        
+        
+    </nav>
+
+
+
+        </div>
+        <aside class='l_side'>
+            
+<section class='m_widget about'>
+    
+    <a href="/about"><img class='avatar waves-image' src='https://gitee.com/fqzhang/web-assets/raw/master/uPic/2020/06/avatar-fqyKY9.jpg'/></a>
+    
+    <div class='header'>强哥</div>
+    <div class='content'>
+        <div>前端工程师5年,技术框架/工具爱好者</div>
+    </div>
+</section>
+
+
+
+<div class="m_widget tagcloud">
+    <div class="header">标签</div>
+    <div class='content'>
+        <a href="/tags/Webstorm/" style="font-size: 14px; color: #808080">Webstorm</a> <a href="/tags/angularjs/" style="font-size: 15.2px; color: #666">angularjs</a> <a href="/tags/centos/" style="font-size: 18.8px; color: #1a1a1a">centos</a> <a href="/tags/css/" style="font-size: 18.8px; color: #1a1a1a">css</a> <a href="/tags/docker/" style="font-size: 15.2px; color: #666">docker</a> <a href="/tags/git/" style="font-size: 14px; color: #808080">git</a> <a href="/tags/hadoop/" style="font-size: 14px; color: #808080">hadoop</a> <a href="/tags/java/" style="font-size: 15.2px; color: #666">java</a> <a href="/tags/javascript/" style="font-size: 20px; color: #000">javascript</a> <a href="/tags/mixpanel/" style="font-size: 14px; color: #808080">mixpanel</a> <a href="/tags/mui/" style="font-size: 16.4px; color: #4d4d4d">mui</a> <a href="/tags/mysql/" style="font-size: 15.2px; color: #666">mysql</a> <a href="/tags/nginx/" style="font-size: 15.2px; color: #666">nginx</a> <a href="/tags/npm/" style="font-size: 14px; color: #808080">npm</a> <a href="/tags/oracle/" style="font-size: 14px; color: #808080">oracle</a> <a href="/tags/react/" style="font-size: 14px; color: #808080">react</a> <a href="/tags/ubuntu/" style="font-size: 18.8px; color: #1a1a1a">ubuntu</a> <a href="/tags/vue/" style="font-size: 17.6px; color: #333">vue</a>
+    </div>
+</div>
+
+
+
+<section class='m_widget categories'>
+    <div class='header'>分类</div>
+    <div class='content'>
+        
+        <ul class="entry">
+            
+            <li><a class="flat-box" href="/categories/linux/">
+                    <div class='name'>linux</div>
+                    <div class='badget'>11</div>
+                </a></li>
+            
+            <li><a class="flat-box" href="/categories/macOS/">
+                    <div class='name'>macOS</div>
+                    <div class='badget'>2</div>
+                </a></li>
+            
+            <li><a class="flat-box" href="/categories/frontend/">
+                    <div class='name'>前端</div>
+                    <div class='badget'>47</div>
+                </a></li>
+            
+            <li><a class="flat-box" href="/categories/backend/">
+                    <div class='name'>后端</div>
+                    <div class='badget'>5</div>
+                </a></li>
+            
+            <li><a class="flat-box" href="/categories/tools/">
+                    <div class='name'>工具</div>
+                    <div class='badget'>2</div>
+                </a></li>
+            
+            <li><a class="flat-box" href="/categories/database/">
+                    <div class='name'>数据库</div>
+                    <div class='badget'>3</div>
+                </a></li>
+            
+            <li><a class="flat-box" href="/categories/algorithm/">
+                    <div class='name'>算法</div>
+                    <div class='badget'>3</div>
+                </a></li>
+            
+            <li><a class="flat-box" href="/categories/editor/">
+                    <div class='name'>编辑器</div>
+                    <div class='badget'>2</div>
+                </a></li>
+            
+        </ul>
+        
+    </div>
+</section>
+
+
+<section class='m_widget friendly-links'>
+    <div class='header'>友情链接</div>
+    <div class='content'>
+        <ul class="entry">
+            
+            <li><a class="flat-box" target="_blank" href="https://gitee.com/fqzhang">
+                    <div class='name'>码云</div>
+                </a></li>
+            
+            <li><a class="flat-box" target="_blank" href="https://github.com/gslnzfq">
+                    <div class='name'>Github</div>
+                </a></li>
+            
+            <li><a class="flat-box" target="_blank" href="https://www.upliveapp.com">
+                    <div class='name'>Up直播主站</div>
+                </a></li>
+            
+            <li><a class="flat-box" target="_blank" href="https://coninup.network">
+                    <div class='name'>CoinUP主站</div>
+                </a></li>
+            
+            <li><a class="flat-box" target="_blank" href="http://taobaofed.org">
+                    <div class='name'>淘宝前端团队</div>
+                </a></li>
+            
+            <li><a class="flat-box" target="_blank" href="https://github.com/gslnzfq/zenbone">
+                    <div class='name'>前端构建工具</div>
+                </a></li>
+            
+        </ul>
+    </div>
+</section>
+
+
+
+        </aside>
+        <script>setLoadingBarProgress(60)</script>
+    </div>
+</div>
+<footer id="footer" class="clearfix">
+    <div class="social-wrapper">
+        
+        
+        <a href="https://github.com/gslnzfq" class="social github"
+           target="_blank" rel="external">
+            <span class="icon icon-github"></span>
+        </a>
+        
+        <a href="https://weibo.com/u/6286882668" class="social sina-weibo"
+           target="_blank" rel="external">
+            <span class="icon icon-sina-weibo"></span>
+        </a>
+        
+        <a href="mailto:zhangfqmail@126.com" class="social mail"
+           target="_blank" rel="external">
+            <span class="icon icon-mail"></span>
+        </a>
+        
+        
+    </div>
+
+    <div>&copy; 2016-2020 强哥. Theme <a
+                href='https://github.com/stkevintan/hexo-theme-material-flow' class="codename">MaterialFlow</a>.
+    </div>
+</footer>
+
+
+<script>setLoadingBarProgress(80)</script>
+
+
+<script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src='//cdn.bootcss.com/node-waves/0.7.5/waves.min.js'></script>
+<!--<script src="//cdn.bootcss.com/scrollReveal.js/3.3.2/scrollreveal.min.js"></script>-->
+<script src="/js/jquery.fitvids.js"></script>
+<script>
+    var GOOGLE_CUSTOM_SEARCH_API_KEY = "";
+    var GOOGLE_CUSTOM_SEARCH_ENGINE_ID = "";
+    var ALGOLIA_API_KEY = "";
+    var ALGOLIA_APP_ID = "";
+    var ALGOLIA_INDEX_NAME = "";
+    var AZURE_SERVICE_NAME = "";
+    var AZURE_INDEX_NAME = "";
+    var AZURE_QUERY_KEY = "";
+    var BAIDU_API_ID = "";
+    var SEARCH_SERVICE = "hexo";
+    var ROOT = "/" || "/";
+    if (!ROOT.endsWith('/')) ROOT += '/';
+</script>
+<script src="/js/search.js"></script>
+<script src="/js/app.js"></script>
+
+
+<script>setLoadingBarProgress(100)</script>
+</body>
+</html>

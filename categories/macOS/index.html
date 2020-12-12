@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+<!--百度统计-->
+<script>
+    // var _hmt = _hmt || [];
+    // (function () {
+    //     var hm = document.createElement("script");
+    //     hm.src = "https://hm.baidu.com/hm.js?964de0b14aeaff7fd14f418fd4350644";
+    //     var s = document.getElementsByTagName("script")[0];
+    //     s.parentNode.insertBefore(hm, s);
+    // })();
+</script>
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>
+        
+        强哥的网站</title>
+    <meta name="description" content="Fed Tech Official Website">
+    <meta name="keywords" content="Github,Hexo,FED,Tech">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="target-densitydpi=device-dpi,user-scalable=no,initial-scale=1,maximum-scale=1, minimum-scale=1">
+    <link rel="shortcut icon" href="https://gitee.com/fqzhang/web-assets/raw/master/uPic/2020/06/avatar-fqyKY9.jpg">
+    <link rel="alternate" href="/atom.xml" title="强哥的网站">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Fed Tech Official Website">
+<meta name="keywords" content="Github,Hexo,FED,Tech">
+<meta property="og:type" content="website">
+<meta property="og:title" content="强哥的网站">
+<meta property="og:url" content="/categories/macOS/index.html">
+<meta property="og:site_name" content="强哥的网站">
+<meta property="og:description" content="Fed Tech Official Website">
+<meta property="og:locale" content="zh-CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="强哥的网站">
+<meta name="twitter:description" content="Fed Tech Official Website">
+
+    <!--<link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+    <link href='//cdn.bootcss.com/node-waves/0.7.5/waves.min.css' rel='stylesheet'> -->
+    <link rel="stylesheet" href="/style.css">
+
+    
+
+    <script>
+        function setLoadingBarProgress(num) {
+            document.getElementById('loading-bar').style.width = num + "%";
+        }
+    </script>
+</head>
+</html>
+<body>
+<a name="top"></a>
+<div id="loading-bar-wrapper">
+    <div id="loading-bar"></div>
+</div>
+
+
+<script>setLoadingBarProgress(20)</script>
+<header class="l_header">
+    <div class="wrapper container">
+        <a class="logo flat-box" href='/'>
+            强哥的网站
+        </a>
+        <div class='menu'>
+            <ul class='h-list'>
+                
+                <li>
+                    <a class='flat-box nav-home' href='/'>
+                        首页
+                    </a>
+                </li>
+                
+                <li>
+                    <a class='flat-box nav-archives' href='/archives/'>
+                        归档
+                    </a>
+                </li>
+                
+                <li>
+                    <a class='flat-box nav-front' href='/categories/frontend/'>
+                        前端
+                    </a>
+                </li>
+                
+                <li>
+                    <a class='flat-box nav-project' href='/project/'>
+                        项目
+                    </a>
+                </li>
+                
+            </ul>
+            <div class='underline'></div>
+        </div>
+        
+        <div class="m_search">
+            <form name="searchform" class="form u-search-form">
+                <input type="text" class="input u-search-input" placeholder="输入关键字"/>
+                <span class="icon icon-search"></span>
+            </form>
+        </div>
+        
+        <ul class='switcher h-list'>
+            
+            <li class='s-search'><a href='javascript:void(0)'><span class="icon icon-search"></span></a></li>
+            
+            <li class='s-menu'><a href='javascript:void(0)'><span class="icon icon-menu"></span></a></li>
+        </ul>
+    </div>
+    <aside class="menu-phone">
+        <nav>
+            
+            <a href="/" class="nav-home nav">
+                首页
+            </a>
+            
+            <a href="/archives/" class="nav-archives nav">
+                归档
+            </a>
+            
+            <a href="/categories/frontend/" class="nav-front nav">
+                前端
+            </a>
+            
+            <a href="/project/" class="nav-project nav">
+                项目
+            </a>
+            
+        </nav>
+    </aside>
+</header>
+
+<script>setLoadingBarProgress(40)</script>
+<div class="l_body">
+    <a name="top_app"></a>
+    <div class='container'>
+        <div class='l_main'>
+            
+<section class="post-list">
+    
+        <div class='post-wrapper'>
+            <article class="post reveal ">
+    <section class="meta">
+        
+        <h2 class="title">
+            <a href="/ckilas0i1003j0xqiy2ykuzgk/">
+                macOS设置nginx代理支持解析PHP
+            </a>
+        </h2>
+        
+        <time>
+            2020年05月08日
+        </time>
+        
+
+<div class='cats'>
+    <a href="/categories/macOS/">macOS</a>
+</div>
+
+    </section>
+    <section class="article typo">
+        <p>在开发时候，我们有时候需要给自己的机器配置一个域名，例如有三方认证的场景，回调地址不会是localhost。所以我们启动服务器的时候会从80端口上运行，然后我们使用webpack-dev-server的时候，只能启动一个项目到80端口上，所以我们可以使用nginx反向代理的方式对url进行处理。例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">www.webrepos.cn/blog    http://localhost:8001</span><br><span class="line">www.webrepos.cn/bbs     http://localhost:8002</span><br><span class="line">www.webrepos.cn/cms     http://localhost:8003</span><br></pre></td></tr></table></figure>
+        
+        <div class="readmore">
+            <a href="/ckilas0i1003j0xqiy2ykuzgk/">阅读全文</a>
+        </div>
+        
+
+        
+        <div class="full-width auto-padding tags">
+            
+            <a href="/tags/nginx/">nginx</a>
+            
+        </div>
+        
+    </section>
+</article>
+
+        </div>
+    
+        <div class='post-wrapper'>
+            <article class="post reveal ">
+    <section class="meta">
+        
+        <h2 class="title">
+            <a href="/ckilas0hx003b0xqifu5a6sn2/">
+                Mac OS搭建支持https的nginx服务器
+            </a>
+        </h2>
+        
+        <time>
+            2018年10月24日
+        </time>
+        
+
+<div class='cats'>
+    <a href="/categories/macOS/">macOS</a>
+</div>
+
+    </section>
+    <section class="article typo">
+        <p>作者原文: <a href="https://www.cnblogs.com/chenguoli/p/7845578.html" target="_blank" rel="noopener">https://www.cnblogs.com/chenguoli/p/7845578.html</a></p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>我们在本地进行项目使用nginx代理开发时，为了完全的模拟线上的环境，我们本地也需要使用https来运行，我们会在本地创建https的相关证书进行配置。</p>
+<h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><p>大家已经安装好了nginx吧，此处就不多说了，我用的是brew安装的nginx</p>
+<p>首先我们找到我们安装nginx的配置文件的目录：/usr/local/etc/nginx</p>
+<p>现在我们需要生成下面的四个文件：</p>
+<ul>
+<li>private.key</li>
+<li>server.crt</li>
+<li>server.csr</li>
+<li>server.key</li>
+</ul>
+        
+        <div class="readmore">
+            <a href="/ckilas0hx003b0xqifu5a6sn2/">阅读全文</a>
+        </div>
+        
+
+        
+        <div class="full-width auto-padding tags">
+            
+            <a href="/tags/nginx/">nginx</a>
+            
+        </div>
+        
+    </section>
+</article>
+
+        </div>
+    
+</section>
+
+
+
+        </div>
+        <aside class='l_side'>
+            
+<section class='m_widget about'>
+    
+    <a href="/about"><img class='avatar waves-image' src='https://gitee.com/fqzhang/web-assets/raw/master/uPic/2020/06/avatar-fqyKY9.jpg'/></a>
+    
+    <div class='header'>强哥</div>
+    <div class='content'>
+        <div>前端工程师5年,技术框架/工具爱好者</div>
+    </div>
+</section>
+
+
+
+<div class="m_widget tagcloud">
+    <div class="header">标签</div>
+    <div class='content'>
+        <a href="/tags/Webstorm/" style="font-size: 14px; color: #808080">Webstorm</a> <a href="/tags/angularjs/" style="font-size: 15.2px; color: #666">angularjs</a> <a href="/tags/centos/" style="font-size: 18.8px; color: #1a1a1a">centos</a> <a href="/tags/css/" style="font-size: 18.8px; color: #1a1a1a">css</a> <a href="/tags/docker/" style="font-size: 15.2px; color: #666">docker</a> <a href="/tags/git/" style="font-size: 14px; color: #808080">git</a> <a href="/tags/hadoop/" style="font-size: 14px; color: #808080">hadoop</a> <a href="/tags/java/" style="font-size: 15.2px; color: #666">java</a> <a href="/tags/javascript/" style="font-size: 20px; color: #000">javascript</a> <a href="/tags/mixpanel/" style="font-size: 14px; color: #808080">mixpanel</a> <a href="/tags/mui/" style="font-size: 16.4px; color: #4d4d4d">mui</a> <a href="/tags/mysql/" style="font-size: 15.2px; color: #666">mysql</a> <a href="/tags/nginx/" style="font-size: 15.2px; color: #666">nginx</a> <a href="/tags/npm/" style="font-size: 14px; color: #808080">npm</a> <a href="/tags/oracle/" style="font-size: 14px; color: #808080">oracle</a> <a href="/tags/react/" style="font-size: 14px; color: #808080">react</a> <a href="/tags/ubuntu/" style="font-size: 18.8px; color: #1a1a1a">ubuntu</a> <a href="/tags/vue/" style="font-size: 17.6px; color: #333">vue</a>
+    </div>
+</div>
+
+
+
+<section class='m_widget categories'>
+    <div class='header'>分类</div>
+    <div class='content'>
+        
+        <ul class="entry">
+            
+            <li><a class="flat-box" href="/categories/linux/">
+                    <div class='name'>linux</div>
+                    <div class='badget'>11</div>
+                </a></li>
+            
+            <li><a class="flat-box" href="/categories/macOS/">
+                    <div class='name'>macOS</div>
+                    <div class='badget'>2</div>
+                </a></li>
+            
+            <li><a class="flat-box" href="/categories/frontend/">
+                    <div class='name'>前端</div>
+                    <div class='badget'>47</div>
+                </a></li>
+            
+            <li><a class="flat-box" href="/categories/backend/">
+                    <div class='name'>后端</div>
+                    <div class='badget'>5</div>
+                </a></li>
+            
+            <li><a class="flat-box" href="/categories/tools/">
+                    <div class='name'>工具</div>
+                    <div class='badget'>2</div>
+                </a></li>
+            
+            <li><a class="flat-box" href="/categories/database/">
+                    <div class='name'>数据库</div>
+                    <div class='badget'>3</div>
+                </a></li>
+            
+            <li><a class="flat-box" href="/categories/algorithm/">
+                    <div class='name'>算法</div>
+                    <div class='badget'>3</div>
+                </a></li>
+            
+            <li><a class="flat-box" href="/categories/editor/">
+                    <div class='name'>编辑器</div>
+                    <div class='badget'>2</div>
+                </a></li>
+            
+        </ul>
+        
+    </div>
+</section>
+
+
+<section class='m_widget friendly-links'>
+    <div class='header'>友情链接</div>
+    <div class='content'>
+        <ul class="entry">
+            
+            <li><a class="flat-box" target="_blank" href="https://gitee.com/fqzhang">
+                    <div class='name'>码云</div>
+                </a></li>
+            
+            <li><a class="flat-box" target="_blank" href="https://github.com/gslnzfq">
+                    <div class='name'>Github</div>
+                </a></li>
+            
+            <li><a class="flat-box" target="_blank" href="https://www.upliveapp.com">
+                    <div class='name'>Up直播主站</div>
+                </a></li>
+            
+            <li><a class="flat-box" target="_blank" href="https://coninup.network">
+                    <div class='name'>CoinUP主站</div>
+                </a></li>
+            
+            <li><a class="flat-box" target="_blank" href="http://taobaofed.org">
+                    <div class='name'>淘宝前端团队</div>
+                </a></li>
+            
+            <li><a class="flat-box" target="_blank" href="https://github.com/gslnzfq/zenbone">
+                    <div class='name'>前端构建工具</div>
+                </a></li>
+            
+        </ul>
+    </div>
+</section>
+
+
+
+        </aside>
+        <script>setLoadingBarProgress(60)</script>
+    </div>
+</div>
+<footer id="footer" class="clearfix">
+    <div class="social-wrapper">
+        
+        
+        <a href="https://github.com/gslnzfq" class="social github"
+           target="_blank" rel="external">
+            <span class="icon icon-github"></span>
+        </a>
+        
+        <a href="https://weibo.com/u/6286882668" class="social sina-weibo"
+           target="_blank" rel="external">
+            <span class="icon icon-sina-weibo"></span>
+        </a>
+        
+        <a href="mailto:zhangfqmail@126.com" class="social mail"
+           target="_blank" rel="external">
+            <span class="icon icon-mail"></span>
+        </a>
+        
+        
+    </div>
+
+    <div>&copy; 2016-2020 强哥. Theme <a
+                href='https://github.com/stkevintan/hexo-theme-material-flow' class="codename">MaterialFlow</a>.
+    </div>
+</footer>
+
+
+<script>setLoadingBarProgress(80)</script>
+
+
+<script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src='//cdn.bootcss.com/node-waves/0.7.5/waves.min.js'></script>
+<!--<script src="//cdn.bootcss.com/scrollReveal.js/3.3.2/scrollreveal.min.js"></script>-->
+<script src="/js/jquery.fitvids.js"></script>
+<script>
+    var GOOGLE_CUSTOM_SEARCH_API_KEY = "";
+    var GOOGLE_CUSTOM_SEARCH_ENGINE_ID = "";
+    var ALGOLIA_API_KEY = "";
+    var ALGOLIA_APP_ID = "";
+    var ALGOLIA_INDEX_NAME = "";
+    var AZURE_SERVICE_NAME = "";
+    var AZURE_INDEX_NAME = "";
+    var AZURE_QUERY_KEY = "";
+    var BAIDU_API_ID = "";
+    var SEARCH_SERVICE = "hexo";
+    var ROOT = "/" || "/";
+    if (!ROOT.endsWith('/')) ROOT += '/';
+</script>
+<script src="/js/search.js"></script>
+<script src="/js/app.js"></script>
+
+
+<script>setLoadingBarProgress(100)</script>
+</body>
+</html>

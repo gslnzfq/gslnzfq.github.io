@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html>
+<!--百度统计-->
+<script>
+    // var _hmt = _hmt || [];
+    // (function () {
+    //     var hm = document.createElement("script");
+    //     hm.src = "https://hm.baidu.com/hm.js?964de0b14aeaff7fd14f418fd4350644";
+    //     var s = document.getElementsByTagName("script")[0];
+    //     s.parentNode.insertBefore(hm, s);
+    // })();
+</script>
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>
+        
+        React-Router4升级之路 |
+        
+        强哥的网站</title>
+    <meta name="description" content="Fed Tech Official Website">
+    <meta name="keywords" content="Github,Hexo,FED,Tech">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="target-densitydpi=device-dpi,user-scalable=no,initial-scale=1,maximum-scale=1, minimum-scale=1">
+    <link rel="shortcut icon" href="https://gitee.com/fqzhang/web-assets/raw/master/uPic/2020/06/avatar-fqyKY9.jpg">
+    <link rel="alternate" href="/atom.xml" title="强哥的网站">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="最近将React升级到了16.2，也将项目的React-Router升级了v4，我主要说一下我的升级之路。 参考： https://reacttraining.com/react-router/web/example/basic">
+<meta name="keywords" content="javascript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="React-Router4升级之路">
+<meta property="og:url" content="/ckilas0gy00130xqi0up8nzkq/index.html">
+<meta property="og:site_name" content="强哥的网站">
+<meta property="og:description" content="最近将React升级到了16.2，也将项目的React-Router升级了v4，我主要说一下我的升级之路。 参考： https://reacttraining.com/react-router/web/example/basic">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2020-12-12T06:07:22.023Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="React-Router4升级之路">
+<meta name="twitter:description" content="最近将React升级到了16.2，也将项目的React-Router升级了v4，我主要说一下我的升级之路。 参考： https://reacttraining.com/react-router/web/example/basic">
+
+    <!--<link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+    <link href='//cdn.bootcss.com/node-waves/0.7.5/waves.min.css' rel='stylesheet'> -->
+    <link rel="stylesheet" href="/style.css">
+
+    
+
+    <script>
+        function setLoadingBarProgress(num) {
+            document.getElementById('loading-bar').style.width = num + "%";
+        }
+    </script>
+</head>
+</html>
+<body>
+<a name="top"></a>
+<div id="loading-bar-wrapper">
+    <div id="loading-bar"></div>
+</div>
+
+
+<script>setLoadingBarProgress(20)</script>
+<header class="l_header">
+    <div class="wrapper container">
+        <a class="logo flat-box" href='/'>
+            强哥的网站
+        </a>
+        <div class='menu'>
+            <ul class='h-list'>
+                
+                <li>
+                    <a class='flat-box nav-home' href='/'>
+                        首页
+                    </a>
+                </li>
+                
+                <li>
+                    <a class='flat-box nav-archives' href='/archives/'>
+                        归档
+                    </a>
+                </li>
+                
+                <li>
+                    <a class='flat-box nav-front' href='/categories/frontend/'>
+                        前端
+                    </a>
+                </li>
+                
+                <li>
+                    <a class='flat-box nav-project' href='/project/'>
+                        项目
+                    </a>
+                </li>
+                
+            </ul>
+            <div class='underline'></div>
+        </div>
+        
+        <div class="m_search">
+            <form name="searchform" class="form u-search-form">
+                <input type="text" class="input u-search-input" placeholder="输入关键字"/>
+                <span class="icon icon-search"></span>
+            </form>
+        </div>
+        
+        <ul class='switcher h-list'>
+            
+            <li class='s-search'><a href='javascript:void(0)'><span class="icon icon-search"></span></a></li>
+            
+            <li class='s-menu'><a href='javascript:void(0)'><span class="icon icon-menu"></span></a></li>
+        </ul>
+    </div>
+    <aside class="menu-phone">
+        <nav>
+            
+            <a href="/" class="nav-home nav">
+                首页
+            </a>
+            
+            <a href="/archives/" class="nav-archives nav">
+                归档
+            </a>
+            
+            <a href="/categories/frontend/" class="nav-front nav">
+                前端
+            </a>
+            
+            <a href="/project/" class="nav-project nav">
+                项目
+            </a>
+            
+        </nav>
+    </aside>
+</header>
+
+<script>setLoadingBarProgress(40)</script>
+<div class="l_body">
+    <a name="top_app"></a>
+    <div class='container'>
+        <div class='l_main'>
+            <article
+  id="post-React-Router4升级之路"
+  class="post white-box article-type-post"
+  itemscope
+  itemprop="blogPost"
+>
+  <a target="_blank" class="edit-article" href="https://github.com/gslnzfq/blog-src/edit/master/source/_posts/React-Router4升级之路.md">编辑</a>
+  <section class="meta">
+    <h2 class="title">
+      <a href="/ckilas0gy00130xqi0up8nzkq/">
+        React-Router4升级之路
+      </a>
+    </h2>
+    
+
+<div class='cats'>
+    <a href="/categories/frontend/">前端</a>
+</div>
+
+  </section>
+  
+  <section class="tog"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#React-16-新特性"><span class="toc-number">1.</span> <span class="toc-text">React 16 新特性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#React-Router-v4-新特性"><span class="toc-number">2.</span> <span class="toc-text">React Router v4 新特性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装"><span class="toc-number">3.</span> <span class="toc-text">安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用"><span class="toc-number">4.</span> <span class="toc-text">使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、路由的配置方式"><span class="toc-number">4.1.</span> <span class="toc-text">一、路由的配置方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二、异步加载的方式"><span class="toc-number">4.2.</span> <span class="toc-text">二、异步加载的方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三、可编程路由-路由切换"><span class="toc-number">4.3.</span> <span class="toc-text">三、可编程路由(路由切换)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#问题"><span class="toc-number">4.4.</span> <span class="toc-text">问题</span></a></li></ol></li></ol></section>
+  
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      <p>最近将React升级到了16.2，也将项目的React-Router升级了v4，我主要说一下我的升级之路。</p>
+<p>参考： <a href="https://reacttraining.com/react-router/web/example/basic" target="_blank" rel="noopener">https://reacttraining.com/react-router/web/example/basic</a><br><a id="more"></a></p>
+<h2 id="React-16-新特性"><a href="#React-16-新特性" class="headerlink" title="React 16 新特性"></a>React 16 新特性</h2><p>1、render支持了多种的返回类型</p>
+<p>2、更好的错误处理，新增componentDidCatch钩子 (<a href="http://blog.csdn.net/liwusen/article/details/78521006" target="_blank" rel="noopener">http://blog.csdn.net/liwusen/article/details/78521006</a>）</p>
+<p>3、支持自定义DOM属性，属性会透传</p>
+<p>4、体积更小（比15减少了32%），删除了内置的类型检查React.PropTypes</p>
+<p>5、Portals（处理弹窗更加优化）</p>
+<p>6、性能优化（<a href="https://www.itcodemonkey.com/article/1306.html" target="_blank" rel="noopener">https://www.itcodemonkey.com/article/1306.html</a>）</p>
+<p><strong>参考：</strong><br><a href="http://www.jb51.net/article/127955.htm" target="_blank" rel="noopener">http://www.jb51.net/article/127955.htm</a><br><a href="http://blog.csdn.net/lx376693576/article/details/78192768" target="_blank" rel="noopener">http://blog.csdn.net/lx376693576/article/details/78192768</a></p>
+<h2 id="React-Router-v4-新特性"><a href="#React-Router-v4-新特性" class="headerlink" title="React Router v4 新特性"></a>React Router v4 新特性</h2><p>1、全组件化</p>
+<p>2、修复多次渲染问题</p>
+<p>3、新的异步加载方式</p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>下面就以React-Router和最新的React16为例子安装，由于React的API变化不是很大，此处就不多做介绍了。</p>
+<ol>
+<li>先删除项目中依赖的旧版React和React-Router(如果不删除，升级需要指定版本号)</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm uninstall react react-dom react-router --save</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>安装最新版本(此处的最新版本就是16和4，注意router的包名称是react-router-dom, history是用来访问历史的)</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install react react-dom react-router-dom <span class="built_in">history</span> --save</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>查看项目目录下面的package.json</li>
+</ol>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">"dependencies": &#123;</span><br><span class="line">    "history": "^4.7.2",</span><br><span class="line">    "react": "^16.2.0",</span><br><span class="line">    "react-dom": "^16.2.0",</span><br><span class="line">    "react-router-dom": "^4.2.2"</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><h3 id="一、路由的配置方式"><a href="#一、路由的配置方式" class="headerlink" title="一、路由的配置方式"></a>一、路由的配置方式</h3><p>先上代码了</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">'react'</span>;</span><br><span class="line"><span class="keyword">import</span> &#123;HashRouter, Route, Switch&#125; <span class="keyword">from</span> <span class="string">'react-router-dom'</span>;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">App</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">    render() &#123;</span><br><span class="line">        <span class="keyword">return</span> (</span><br><span class="line">            &lt;HashRouter&gt;</span><br><span class="line">                &lt;Switch&gt;</span><br><span class="line">                    &lt;Route path=<span class="string">"/"</span> exact component=&#123;BindEmail&#125;/&gt;</span><br><span class="line">                    &lt;Route path=<span class="string">"/bindemail"</span> component=&#123;BindEmail&#125;/&gt;</span><br><span class="line">                    &lt;Route path=<span class="string">"/bindemailresult/:type"</span> component=&#123;BindEmailResult&#125;/&gt;</span><br><span class="line">                    &lt;Route path=<span class="string">"/updatepassword"</span> component=&#123;UpdatePassword&#125;/&gt;</span><br><span class="line">                    &lt;Route path=<span class="string">"/updatemail"</span> component=&#123;UpdateMail&#125;/&gt;</span><br><span class="line">                    &lt;Route component=&#123;BindEmail&#125;/&gt;</span><br><span class="line">                &lt;<span class="regexp">/Switch&gt;</span></span><br><span class="line"><span class="regexp">            &lt;/</span>HashRouter&gt;</span><br><span class="line">        );</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>看上面的代码首先要注意几点</p>
+<ol>
+<li>Router替换成了HashRouter，并且少了一个history的属性，当然你也可以使用BrowserRouter不过需要后台支持。</li>
+<li>Route中删除了getComponent属性，那我们异步加载怎么办呢，下面会说一下。</li>
+<li>多了一个Switch组件，以前设置404路由的时候只要在最后加上path=”*”就好了，但是现在只需要在最后加一个路由并且由Switch组件包裹即可。</li>
+<li>第一行的Route上有一个exact属性，这个属性说明精确匹配，否则所有/开头的组件都会展示/配置的组件(比较绕，可以到时候讲一下)。</li>
+<li>HashRouter组件内部只能包含一个组件，如果有多个会直接报错。</li>
+<li>当然了，我们导入的时候只需要导入react-router-dom。</li>
+</ol>
+<p><strong><em>4很重要，不要忽略</em></strong></p>
+<h3 id="二、异步加载的方式"><a href="#二、异步加载的方式" class="headerlink" title="二、异步加载的方式"></a>二、异步加载的方式</h3><p>我们可以使用高阶组件和webpack的import方法进行异步加载js。</p>
+<ol>
+<li>首先我们得有一个用来加载异步组件的高阶组件，我们暂且称之为”asyncComponent”，实现如下：</li>
+</ol>
+<figure class="highlight jsx"><figcaption><span>harmony</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">'react'</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> asyncComponent = <span class="function"><span class="params">loadComponent</span> =&gt;</span> (</span><br><span class="line">    <span class="class"><span class="keyword">class</span> <span class="title">AsyncComponent</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">        <span class="keyword">constructor</span>(props) &#123;</span><br><span class="line">            <span class="keyword">super</span>(props);</span><br><span class="line">            <span class="keyword">this</span>.state = &#123;</span><br><span class="line">                Component: <span class="literal">null</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        componentWillMount() &#123;</span><br><span class="line">            <span class="keyword">if</span> (<span class="keyword">this</span>.hasLoadedComponent()) &#123;</span><br><span class="line">                <span class="keyword">return</span></span><br><span class="line">            &#125;</span><br><span class="line">            loadComponent()</span><br><span class="line">                <span class="comment">//  取到module的default作为组件，因为我们导出组件的时候使用的是 export default</span></span><br><span class="line">                .then(<span class="function"><span class="params">module</span> =&gt;</span> <span class="built_in">module</span>.default)</span><br><span class="line">                .then(<span class="function">(<span class="params">Component</span>) =&gt;</span> &#123;</span><br><span class="line">                    <span class="keyword">this</span>.setState(&#123;Component&#125;)</span><br><span class="line">                &#125;)</span><br><span class="line">                .catch(<span class="function">(<span class="params">err</span>) =&gt;</span> &#123;</span><br><span class="line">                    <span class="built_in">console</span>.error(<span class="string">`Cannot load component in &lt;AsyncComponent /&gt;`</span>);</span><br><span class="line">                    <span class="keyword">throw</span> err</span><br><span class="line">                &#125;)</span><br><span class="line">        &#125;</span><br><span class="line">        hasLoadedComponent() &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">this</span>.state.Component !== <span class="literal">null</span></span><br><span class="line">        &#125;</span><br><span class="line">        render() &#123;</span><br><span class="line">            <span class="keyword">const</span> &#123;Component&#125; = <span class="keyword">this</span>.state;</span><br><span class="line">            <span class="keyword">return</span> (Component) ? <span class="xml"><span class="tag">&lt;<span class="name">Component</span> &#123;<span class="attr">...this.props</span>&#125; /&gt;</span></span> : <span class="literal">null</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>我们将需要拆分的js文件，进行下面的处理，import方法会返回一个promise，注意/<em> webpackChunkName: “test” </em>/ 这种注释不能删除，它描述了拆分后的文件名称。</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123;asyncComponent <span class="keyword">as</span> <span class="keyword">async</span>&#125; <span class="keyword">from</span> <span class="string">'./views/async'</span></span><br><span class="line"><span class="comment">// 测试</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> Test = <span class="keyword">async</span>(<span class="function"><span class="params">()</span> =&gt;</span> <span class="keyword">import</span>(<span class="comment">/* webpackChunkName: "test" */</span> <span class="string">'./test'</span>));</span><br><span class="line"><span class="comment">// 绑定邮箱</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> BindEmail = <span class="keyword">async</span>(<span class="function"><span class="params">()</span> =&gt;</span> <span class="keyword">import</span>(<span class="comment">/* webpackChunkName: "bindemail" */</span> <span class="string">'./views/bindemail'</span>));</span><br><span class="line"><span class="comment">// 修改密码</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> UpdatePassword = <span class="keyword">async</span>(<span class="function"><span class="params">()</span> =&gt;</span> <span class="keyword">import</span>(<span class="comment">/* webpackChunkName: "updatepassword" */</span> <span class="string">'./views/bindemail/updatepassword'</span>));</span><br><span class="line"><span class="comment">// 修改邮箱</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> UpdateMail = <span class="keyword">async</span>(<span class="function"><span class="params">()</span> =&gt;</span> <span class="keyword">import</span>(<span class="comment">/* webpackChunkName: "updatemail" */</span> <span class="string">'./views/bindemail/updatemail'</span>));</span><br><span class="line"><span class="comment">// 邮箱绑定结果</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> BindEmailResult = <span class="keyword">async</span>(<span class="function"><span class="params">()</span> =&gt;</span> <span class="keyword">import</span>(<span class="comment">/* webpackChunkName: "bindemailresult" */</span> <span class="string">'./views/bindemail/result'</span>));</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>然后我们在路由中直接配置component属性就好了，相比之前会简单一点</li>
+</ol>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;Route path=<span class="string">"/bindemail"</span> component=&#123;BindEmail&#125;/&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="三、可编程路由-路由切换"><a href="#三、可编程路由-路由切换" class="headerlink" title="三、可编程路由(路由切换)"></a>三、可编程路由(路由切换)</h3><ol>
+<li>我们一般会在js中获取路由的参数，我们以前的方式是这样的</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">this.props.route.params.xxx;</span><br></pre></td></tr></table></figure>
+<p>在v4中，会在props上挂载一个match对象，所以获取参数，使用下面的方式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">this.props.match.params.xxx</span><br></pre></td></tr></table></figure>
+<p>参考：<a href="https://reacttraining.com/react-router/web/api/match" target="_blank" rel="noopener">https://reacttraining.com/react-router/web/api/match</a></p>
+<ol start="2">
+<li>在代码中切换路由，以前是直接调用hashHistory的方法切换，如</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import &#123; hashHistory &#125; from &apos;react-router&apos;;</span><br><span class="line">hashHistory.push(&apos;/home&apos;);</span><br></pre></td></tr></table></figure>
+<p>在v4中将操作历史的工具单独抽离了，也就是history包，API和hashHistory基本一致</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">import &#123; createHashHistory &#125; from &apos;history&apos;;</span><br><span class="line">const history = createHashHistory();</span><br><span class="line">history.push(&apos;/home&apos;);</span><br></pre></td></tr></table></figure>
+<h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><ol>
+<li>低端的浏览器上面可能不支持Map和Set类，会报错：</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Map is not undefined</span><br></pre></td></tr></table></figure>
+<p>解决方案：<br>安装core-js，在引入Set，Map相关的语法糖（或许你也可以babel-polyfill，React官方使用的是core-js），如下就可以了</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="built_in">Map</span> <span class="keyword">from</span> <span class="string">'core-js/es6/map'</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="built_in">Set</span> <span class="keyword">from</span> <span class="string">'core-js/es6/set'</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//  绑定在window上，就可以全局访问了</span></span><br><span class="line"><span class="built_in">window</span>.Map = <span class="built_in">Map</span>;</span><br><span class="line"><span class="built_in">window</span>.Set = <span class="built_in">Set</span>;</span><br></pre></td></tr></table></figure>
+<p>参考：<a href="https://reactjs.org/docs/javascript-environment-requirements.html" target="_blank" rel="noopener">https://reactjs.org/docs/javascript-environment-requirements.html</a></p>
+
+    </div>
+    <!-- 循环显示所有的tags -->
+    
+    <div class="article-tags tags">
+      
+      <a href="/tags/javascript/">javascript</a>
+      
+    </div>
+    
+  </section>
+  <div class="copyright-block">
+    <p>- 复制请标明出处 -</p>
+    <p>撰写时间：2018年01月31日</p>
+    <p>
+      联系方式：<a href="mailto:zhangfqmail@126.com">zhangfqmail@126.com</a>
+    </p>
+    <p>
+      本文链接：<a
+        href="http://gslnzfq.github.io/ckilas0gy00130xqi0up8nzkq/"
+        target="_blank"
+        >React-Router4升级之路</a
+      >
+    </p>
+  </div>
+  
+</article>
+
+        </div>
+        <aside class='l_side'>
+            
+<section class='m_widget about'>
+    
+    <a href="/about"><img class='avatar waves-image' src='https://gitee.com/fqzhang/web-assets/raw/master/uPic/2020/06/avatar-fqyKY9.jpg'/></a>
+    
+    <div class='header'>强哥</div>
+    <div class='content'>
+        <div>前端工程师5年,技术框架/工具爱好者</div>
+    </div>
+</section>
+
+
+
+<div class="m_widget tagcloud">
+    <div class="header">标签</div>
+    <div class='content'>
+        <a href="/tags/Webstorm/" style="font-size: 14px; color: #808080">Webstorm</a> <a href="/tags/angularjs/" style="font-size: 15.2px; color: #666">angularjs</a> <a href="/tags/centos/" style="font-size: 18.8px; color: #1a1a1a">centos</a> <a href="/tags/css/" style="font-size: 18.8px; color: #1a1a1a">css</a> <a href="/tags/docker/" style="font-size: 15.2px; color: #666">docker</a> <a href="/tags/git/" style="font-size: 14px; color: #808080">git</a> <a href="/tags/hadoop/" style="font-size: 14px; color: #808080">hadoop</a> <a href="/tags/java/" style="font-size: 15.2px; color: #666">java</a> <a href="/tags/javascript/" style="font-size: 20px; color: #000">javascript</a> <a href="/tags/mixpanel/" style="font-size: 14px; color: #808080">mixpanel</a> <a href="/tags/mui/" style="font-size: 16.4px; color: #4d4d4d">mui</a> <a href="/tags/mysql/" style="font-size: 15.2px; color: #666">mysql</a> <a href="/tags/nginx/" style="font-size: 15.2px; color: #666">nginx</a> <a href="/tags/npm/" style="font-size: 14px; color: #808080">npm</a> <a href="/tags/oracle/" style="font-size: 14px; color: #808080">oracle</a> <a href="/tags/react/" style="font-size: 14px; color: #808080">react</a> <a href="/tags/ubuntu/" style="font-size: 18.8px; color: #1a1a1a">ubuntu</a> <a href="/tags/vue/" style="font-size: 17.6px; color: #333">vue</a>
+    </div>
+</div>
+
+
+
+<section class='m_widget categories'>
+    <div class='header'>分类</div>
+    <div class='content'>
+        
+        <ul class="entry">
+            
+            <li><a class="flat-box" href="/categories/linux/">
+                    <div class='name'>linux</div>
+                    <div class='badget'>11</div>
+                </a></li>
+            
+            <li><a class="flat-box" href="/categories/macOS/">
+                    <div class='name'>macOS</div>
+                    <div class='badget'>2</div>
+                </a></li>
+            
+            <li><a class="flat-box" href="/categories/frontend/">
+                    <div class='name'>前端</div>
+                    <div class='badget'>47</div>
+                </a></li>
+            
+            <li><a class="flat-box" href="/categories/backend/">
+                    <div class='name'>后端</div>
+                    <div class='badget'>5</div>
+                </a></li>
+            
+            <li><a class="flat-box" href="/categories/tools/">
+                    <div class='name'>工具</div>
+                    <div class='badget'>2</div>
+                </a></li>
+            
+            <li><a class="flat-box" href="/categories/database/">
+                    <div class='name'>数据库</div>
+                    <div class='badget'>3</div>
+                </a></li>
+            
+            <li><a class="flat-box" href="/categories/algorithm/">
+                    <div class='name'>算法</div>
+                    <div class='badget'>3</div>
+                </a></li>
+            
+            <li><a class="flat-box" href="/categories/editor/">
+                    <div class='name'>编辑器</div>
+                    <div class='badget'>2</div>
+                </a></li>
+            
+        </ul>
+        
+    </div>
+</section>
+
+
+<section class='m_widget friendly-links'>
+    <div class='header'>友情链接</div>
+    <div class='content'>
+        <ul class="entry">
+            
+            <li><a class="flat-box" target="_blank" href="https://gitee.com/fqzhang">
+                    <div class='name'>码云</div>
+                </a></li>
+            
+            <li><a class="flat-box" target="_blank" href="https://github.com/gslnzfq">
+                    <div class='name'>Github</div>
+                </a></li>
+            
+            <li><a class="flat-box" target="_blank" href="https://www.upliveapp.com">
+                    <div class='name'>Up直播主站</div>
+                </a></li>
+            
+            <li><a class="flat-box" target="_blank" href="https://coninup.network">
+                    <div class='name'>CoinUP主站</div>
+                </a></li>
+            
+            <li><a class="flat-box" target="_blank" href="http://taobaofed.org">
+                    <div class='name'>淘宝前端团队</div>
+                </a></li>
+            
+            <li><a class="flat-box" target="_blank" href="https://github.com/gslnzfq/zenbone">
+                    <div class='name'>前端构建工具</div>
+                </a></li>
+            
+        </ul>
+    </div>
+</section>
+
+
+
+        </aside>
+        <script>setLoadingBarProgress(60)</script>
+    </div>
+</div>
+<footer id="footer" class="clearfix">
+    <div class="social-wrapper">
+        
+        
+        <a href="https://github.com/gslnzfq" class="social github"
+           target="_blank" rel="external">
+            <span class="icon icon-github"></span>
+        </a>
+        
+        <a href="https://weibo.com/u/6286882668" class="social sina-weibo"
+           target="_blank" rel="external">
+            <span class="icon icon-sina-weibo"></span>
+        </a>
+        
+        <a href="mailto:zhangfqmail@126.com" class="social mail"
+           target="_blank" rel="external">
+            <span class="icon icon-mail"></span>
+        </a>
+        
+        
+    </div>
+
+    <div>&copy; 2016-2020 强哥. Theme <a
+                href='https://github.com/stkevintan/hexo-theme-material-flow' class="codename">MaterialFlow</a>.
+    </div>
+</footer>
+
+
+<script>setLoadingBarProgress(80)</script>
+
+
+<script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src='//cdn.bootcss.com/node-waves/0.7.5/waves.min.js'></script>
+<!--<script src="//cdn.bootcss.com/scrollReveal.js/3.3.2/scrollreveal.min.js"></script>-->
+<script src="/js/jquery.fitvids.js"></script>
+<script>
+    var GOOGLE_CUSTOM_SEARCH_API_KEY = "";
+    var GOOGLE_CUSTOM_SEARCH_ENGINE_ID = "";
+    var ALGOLIA_API_KEY = "";
+    var ALGOLIA_APP_ID = "";
+    var ALGOLIA_INDEX_NAME = "";
+    var AZURE_SERVICE_NAME = "";
+    var AZURE_INDEX_NAME = "";
+    var AZURE_QUERY_KEY = "";
+    var BAIDU_API_ID = "";
+    var SEARCH_SERVICE = "hexo";
+    var ROOT = "/" || "/";
+    if (!ROOT.endsWith('/')) ROOT += '/';
+</script>
+<script src="/js/search.js"></script>
+<script src="/js/app.js"></script>
+
+
+<script>setLoadingBarProgress(100)</script>
+</body>
+</html>

@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>强哥的网站</title>
+  <icon>https://www.gravatar.com/avatar/dc11858d86f8d1de1acbd7c2cf0bb9f3</icon>
+  <subtitle>Fed Tech Official Website</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="/"/>
+  <updated>2020-12-12T06:07:22.023Z</updated>
+  <id>/</id>
+  
+  <author>
+    <name>强哥</name>
+    <email>zhangfqmail@126.com</email>
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Git中文文件名不能正常显示</title>
+    <link href="/ckilas0hi002a0xqidv9pw98o/"/>
+    <id>/ckilas0hi002a0xqidv9pw98o/</id>
+    <published>2020-06-26T10:15:03.000Z</published>
+    <updated>2020-12-12T06:07:22.023Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;表现&quot;&gt;&lt;a href=&quot;#表现&quot; class=&quot;headerlink&quot; title=&quot;表现&quot;&gt;&lt;/a&gt;表现&lt;/h3&gt;&lt;p&gt;在git中我们使用git status查询文件修改状态时，对于中文的文件名没有办法正常显示，效果如下图所示；&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/fqzhang/web-assets/raw/master/uPic/2020/06/GSCSDD-EDxrKo.png&quot; alt=&quot;显示乱码&quot; style=&quot;zoom:50%;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;经过查询资料和git的设置有些关系；&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="工具" scheme="/categories/tools/"/>
+    
+    
+      <category term="git" scheme="/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>macOS设置nginx代理支持解析PHP</title>
+    <link href="/ckilas0i1003j0xqiy2ykuzgk/"/>
+    <id>/ckilas0i1003j0xqiy2ykuzgk/</id>
+    <published>2020-05-08T01:24:51.000Z</published>
+    <updated>2020-12-12T06:07:22.023Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在开发时候，我们有时候需要给自己的机器配置一个域名，例如有三方认证的场景，回调地址不会是localhost。所以我们启动服务器的时候会从80端口上运行，然后我们使用webpack-dev-server的时候，只能启动一个项目到80端口上，所以我们可以使用nginx反向代理的方式对url进行处理。例如：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;www.webrepos.cn/blog    http://localhost:8001&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;www.webrepos.cn/bbs     http://localhost:8002&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;www.webrepos.cn/cms     http://localhost:8003&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="macOS" scheme="/categories/macOS/"/>
+    
+    
+      <category term="nginx" scheme="/tags/nginx/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>QQ二次分享H5卡片内容</title>
+    <link href="/ckilas0gv000y0xqiq7yi00uf/"/>
+    <id>/ckilas0gv000y0xqiq7yi00uf/</id>
+    <published>2020-03-21T14:21:53.000Z</published>
+    <updated>2020-12-12T06:07:22.023Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt; 我们H5页面在QQ里面打开后，点击QQ右上角分享到好友，会展示下面的样式&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="前端" scheme="/categories/frontend/"/>
+    
+    
+      <category term="javascript" scheme="/tags/javascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>页面中PNG图片优化</title>
+    <link href="/ckilas0jq00740xqio8pv3eyl/"/>
+    <id>/ckilas0jq00740xqio8pv3eyl/</id>
+    <published>2020-03-21T14:03:24.000Z</published>
+    <updated>2020-12-12T06:07:22.027Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;活动页面中例如页面背景等图片的尺寸都是很大的，png的尺寸一般是的100+kb，导致加载比较慢；&lt;/p&gt;
+&lt;p&gt;现在我们的方案就是在支持webp的浏览器中使用webp作为背景图减少体积，虽然webp是有损压缩，但是还可以接受；&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="前端" scheme="/categories/frontend/"/>
+    
+    
+      <category term="javascript" scheme="/tags/javascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>将proto文件转化成js文件输出</title>
+    <link href="/ckilas0jb00620xqif9ircmqn/"/>
+    <id>/ckilas0jb00620xqif9ircmqn/</id>
+    <published>2020-03-21T13:59:13.000Z</published>
+    <updated>2020-12-12T06:07:22.027Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;做这个的时候，是因为在做项目的时候，会有一些proto（Google  Protobuf）文件，这些pb文件有时候会更新。如果每次我们人肉的去用pbjs（将proto文件转换成js文件的工具）转的话，比较麻烦。所以我干脆做个简单的工具直接调用下就可以了，一切按照配置走的。&lt;/p&gt;
+&lt;p&gt;注意：转pb的时候，对应的pb文件夹需要有google文件夹（谷歌内置的类型文件），否则可能会转换不成功或者报错。&lt;/p&gt;
+&lt;p&gt;google内置文件下载地址：&lt;a href=&quot;https://gitee.com/fqzhang/google-pbs&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://gitee.com/fqzhang/google-pbs&lt;/a&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="前端" scheme="/categories/frontend/"/>
+    
+    
+      <category term="javascript" scheme="/tags/javascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>mixpanel打点不生效</title>
+    <link href="/ckilas0hz003f0xqic5zrybt4/"/>
+    <id>/ckilas0hz003f0xqic5zrybt4/</id>
+    <published>2019-12-26T02:20:37.000Z</published>
+    <updated>2020-12-12T06:07:22.023Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;使用了mixpanel打点，但是在后端没有查询到打点的数据，页面也没有发送打点的请求，通过查询相关资料发现，浏览器禁用了跟踪的设置；&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/fqzhang/web-assets/raw/master/uPic/
+      
+    
+    </summary>
+    
+      <category term="前端" scheme="/categories/frontend/"/>
+    
+    
+      <category term="javascript" scheme="/tags/javascript/"/>
+    
+      <category term="mixpanel" scheme="/tags/mixpanel/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>webpack将css和js文件内容输出到html</title>
+    <link href="/ckilas0i900410xqim824a49q/"/>
+    <id>/ckilas0i900410xqim824a49q/</id>
+    <published>2019-12-19T09:43:42.000Z</published>
+    <updated>2020-12-12T06:07:22.027Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;对于小的项目，我们将css文件和js文件可以直接内联插入到html中，可以减少两次请求，达到优化的效果；当然比较大的项目我们可以注入一些公共的样式和js文件的到html中；&lt;/p&gt;
+&lt;p&gt;我们使用html-webpack-plugin的插件&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/DustinJackson/html-webpack-inline-source-plugin&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://github.com/DustinJackson/html-webpack-inline-source-plugin&lt;/a&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="前端" scheme="/categories/frontend/"/>
+    
+    
+      <category term="javascript" scheme="/tags/javascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>React长列表详情返回后保留位置</title>
+    <link href="/ckilas0h000170xqiwb57y2xi/"/>
+    <id>/ckilas0h000170xqiwb57y2xi/</id>
+    <published>2019-11-01T10:12:09.000Z</published>
+    <updated>2020-12-12T06:07:22.023Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在React项目中我们从列表点击到详情页面，再返回的时候，会回到列表的顶部，用户体验比较差；&lt;/p&gt;
+&lt;p&gt;适用环境：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;列表页面使用的iscroll&lt;/li&gt;
+&lt;li&gt;列表使用的分页加载，及上划加载下一页&lt;/li&gt;
+&lt;li&gt;在列表页的任意位置点击到详情&lt;/li&gt;
+&lt;li&gt;返回到列表要定位到点击之前的滚动条位置&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="前端" scheme="/categories/frontend/"/>
+    
+    
+      <category term="javascript" scheme="/tags/javascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>webpack4升级指南</title>
+    <link href="/ckilas0ib00450xqiugukmo75/"/>
+    <id>/ckilas0ib00450xqiugukmo75/</id>
+    <published>2019-06-19T02:43:42.000Z</published>
+    <updated>2020-12-12T06:07:22.027Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;因为webpack4有很多吸引人的特性，在开发的时候能能提高效率，所以将团队项目的webpack3升级到了webpack4；&lt;/p&gt;
+&lt;h3 id=&quot;新特性&quot;&gt;&lt;a href=&quot;#新特性&quot; class=&quot;headerlink&quot; title=&quot;新特性&quot;&gt;&lt;/a&gt;新特性&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;对Node.js版本必须&amp;gt;=8.9.4；&lt;/li&gt;
+&lt;li&gt;支持WebAssembly；&lt;/li&gt;
+&lt;li&gt;支持多种模块类型；&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://webpack.js.org/configuration/mode/#usage&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;通过mode来处理开发环境和线上环境优化&lt;/a&gt;；&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://webpack.js.org/guides/code-splitting/#entry-points&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;更简单配置的拆包功能；&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://webpack.js.org/guides/hot-module-replacement/#enabling-hmr&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;更快的热加载功能；&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;零配置模块打包（output:./dist/main.js；entry:./src/index.js）；&lt;/li&gt;
+&lt;li&gt;更快的构建时间，大项目及其可观；&lt;/li&gt;
+&lt;li&gt;全新的插件系统，插件优化替换；&lt;/li&gt;
+&lt;/ol&gt;
+    
+    </summary>
+    
+      <category term="前端" scheme="/categories/frontend/"/>
+    
+    
+      <category term="javascript" scheme="/tags/javascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>滚动到底部加载下一页实现</title>
+    <link href="/ckilas0jg006g0xqizvmah1mg/"/>
+    <id>/ckilas0jg006g0xqizvmah1mg/</id>
+    <published>2019-05-31T06:50:07.000Z</published>
+    <updated>2020-12-12T06:07:22.027Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;随着网页风格的变化，许多分页方式使用了，上拉或者滚动加载下一页的方式，这样即减少了后端计算总数的过程，也为前端提供了新的交互方式。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;下面是常见的滚动加载的实例；&lt;/strong&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="前端" scheme="/categories/frontend/"/>
+    
+    
+      <category term="javascript" scheme="/tags/javascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用Service Account读取谷歌表格</title>
+    <link href="/ckilas0hj002d0xqi993un5nf/"/>
+    <id>/ckilas0hj002d0xqi993un5nf/</id>
+    <published>2019-04-28T07:44:09.000Z</published>
+    <updated>2020-12-12T06:07:22.023Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;随着谷歌表格API升级到第四个版本以后，虽然提供了更快的表格数据读取API，但是还有就是需要授权才能读取到数据，即使是发布到网络的表格。所以我们在做这一升级的时候，尝试了很多的方法，也走过了很多的坑，下面我就简单总结一下。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="后端" scheme="/categories/backend/"/>
+    
+    
+      <category term="javascript" scheme="/tags/javascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>在webpack4中module.exports导出的对象上属性丢失的问题</title>
+    <link href="/ckilas0i2003n0xqi2ywoi1vf/"/>
+    <id>/ckilas0i2003n0xqi2ywoi1vf/</id>
+    <published>2019-03-12T02:58:22.000Z</published>
+    <updated>2020-12-12T06:07:22.023Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;问题&quot;&gt;&lt;a href=&quot;#问题&quot; class=&quot;headerlink&quot; title=&quot;问题&quot;&gt;&lt;/a&gt;问题&lt;/h2&gt;&lt;p&gt;使用了webpack4，在复用以前的commonjs的模块时，发现对象上的属性丢失了，示例代码如下所示&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;/**&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt; * &lt;span class=&quot;doctag&quot;&gt;@return &lt;span class=&quot;variable&quot;&gt;string&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt; */&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Test&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;)&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&#39;hello world&#39;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Test.name = &lt;span class=&quot;string&quot;&gt;&#39;test&#39;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Test.addr = &lt;span class=&quot;string&quot;&gt;&#39;Beijing&#39;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;module&lt;/span&gt;.exports = Test;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="工具" scheme="/categories/tools/"/>
+    
+    
+      <category term="javascript" scheme="/tags/javascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>React中路由跳转到同一个组件数据不刷新</title>
+    <link href="/ckilas0k7007w0xqizeqfdiye/"/>
+    <id>/ckilas0k7007w0xqizeqfdiye/</id>
+    <published>2018-12-30T14:22:43.000Z</published>
+    <updated>2020-12-12T06:07:22.023Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;场景&quot;&gt;&lt;a href=&quot;#场景&quot; class=&quot;headerlink&quot; title=&quot;场景&quot;&gt;&lt;/a&gt;场景&lt;/h2&gt;&lt;p&gt;在使用React开发的时候，有时候我们可能会跳转路由了但是渲染的的是同一个组件，这样就导致路由跳转了，但是页面还是复用的之前的，没有刷新。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;具体场景如下：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;路由跳转使用的同一个组件，都使用的是Profile组件：&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// /profile/10 -&amp;gt; /profile/11&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;相关代码&lt;/p&gt;
+&lt;figure class=&quot;highlight jsx&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;Profile uid=&amp;#123;uid&amp;#125; onOpenProfile=&amp;#123;&lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.goProfile.bind(&lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;)&amp;#125; /&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;原因&quot;&gt;&lt;a href=&quot;#原因&quot; class=&quot;headerlink&quot; title=&quot;原因&quot;&gt;&lt;/a&gt;原因&lt;/h2&gt;&lt;p&gt;主要是因为我们请求用户信息数据的方法写在了componentDidMount()生命周期（该生命周期只会在组件挂载的时候执行一次）中，导致了修改属性uid并不会重新拉取用户的数据，给用户一种没有刷新的感觉。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="前端" scheme="/categories/frontend/"/>
+    
+    
+      <category term="react" scheme="/tags/react/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Mac OS搭建支持https的nginx服务器</title>
+    <link href="/ckilas0hx003b0xqifu5a6sn2/"/>
+    <id>/ckilas0hx003b0xqifu5a6sn2/</id>
+    <published>2018-10-24T02:48:18.000Z</published>
+    <updated>2020-12-12T06:07:22.023Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;作者原文: &lt;a href=&quot;https://www.cnblogs.com/chenguoli/p/7845578.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://www.cnblogs.com/chenguoli/p/7845578.html&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;我们在本地进行项目使用nginx代理开发时，为了完全的模拟线上的环境，我们本地也需要使用https来运行，我们会在本地创建https的相关证书进行配置。&lt;/p&gt;
+&lt;h2 id=&quot;实现&quot;&gt;&lt;a href=&quot;#实现&quot; class=&quot;headerlink&quot; title=&quot;实现&quot;&gt;&lt;/a&gt;实现&lt;/h2&gt;&lt;p&gt;大家已经安装好了nginx吧，此处就不多说了，我用的是brew安装的nginx&lt;/p&gt;
+&lt;p&gt;首先我们找到我们安装nginx的配置文件的目录：/usr/local/etc/nginx&lt;/p&gt;
+&lt;p&gt;现在我们需要生成下面的四个文件：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;private.key&lt;/li&gt;
+&lt;li&gt;server.crt&lt;/li&gt;
+&lt;li&gt;server.csr&lt;/li&gt;
+&lt;li&gt;server.key&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="macOS" scheme="/categories/macOS/"/>
+    
+    
+      <category term="nginx" scheme="/tags/nginx/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Swiper常见使用以及问题整理</title>
+    <link href="/ckilas0jw007s0xqihkpr96j9/"/>
+    <id>/ckilas0jw007s0xqihkpr96j9/</id>
+    <published>2018-09-04T05:26:37.000Z</published>
+    <updated>2020-12-12T06:07:22.023Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;swiper中文API：&lt;a href=&quot;https://www.swiper.com.cn/api/index.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://www.swiper.com.cn/api/index.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;1、实现下面的布局(主要看左右两边的)&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/fqzhang/web-assets/raw/master/uPic/2020/06/33819adb-OKAEG8.png&quot; alt&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="前端" scheme="/categories/frontend/"/>
+    
+    
+      <category term="javascript" scheme="/tags/javascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用nginx反向代理实现本地多项目运行</title>
+    <link href="/ckilas0it005a0xqia1g6l3qn/"/>
+    <id>/ckilas0it005a0xqia1g6l3qn/</id>
+    <published>2018-08-13T08:18:24.000Z</published>
+    <updated>2020-12-12T06:07:22.027Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h2&gt;&lt;p&gt;通过本文，你可以了解到nginx反向代理的相关知识，以及如何在Mac OS上进行实践。其实因为懒，这个文章好久就想写了。&lt;/p&gt;
+&lt;h2 id=&quot;一、起因&quot;&gt;&lt;a href=&quot;#一、起因&quot; class=&quot;headerlink&quot; title=&quot;一、起因&quot;&gt;&lt;/a&gt;一、起因&lt;/h2&gt;&lt;p&gt;在我开发GIFTO钱包和UG以及其他项目的时候，我们在启动项目的的时候默认会使用&lt;code&gt;zenbone start&lt;/code&gt;来启动，因为我们配置的每个端口都是80，一个端口只能运行一个程序，就导致了多项目不能同时运行的问题。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="前端" scheme="/categories/frontend/"/>
+    
+    
+      <category term="javascript" scheme="/tags/javascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用html2canvas实现截图下载</title>
+    <link href="/ckilas0ik004q0xqiy9akocdg/"/>
+    <id>/ckilas0ik004q0xqiy9akocdg/</id>
+    <published>2018-05-29T13:25:22.000Z</published>
+    <updated>2020-12-12T06:07:22.027Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;场景&quot;&gt;&lt;a href=&quot;#场景&quot; class=&quot;headerlink&quot; title=&quot;场景&quot;&gt;&lt;/a&gt;场景&lt;/h2&gt;&lt;p&gt;有时候我们会将我们的网页保存为截图，供离线观看和传播。相对于直接保存一个网页，图片有着不易修改，单独文件的好处，所以实现网页的截图还是还有必要的。&lt;/p&gt;
+&lt;h2 id=&quot;方案&quot;&gt;&lt;a href=&quot;#方案&quot; class=&quot;headerlink&quot; title=&quot;方案&quot;&gt;&lt;/a&gt;方案&lt;/h2&gt;&lt;p&gt;经过在网上找一些插件，其中html2canvas插件用的人比较多，比较好的还有dom-to-image，这两个插件都可以实现网页的截图生成canvas功能。此处就以html2canvas为例记录一下笔记。&lt;/p&gt;
+&lt;p&gt;这两个插件都提供了npm包，所以可以直接使用npm下载。&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;npm install html2canvas -S&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="前端" scheme="/categories/frontend/"/>
+    
+    
+      <category term="javascript" scheme="/tags/javascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>当窗口被浏览器拦截了怎么办？</title>
+    <link href="/ckilas0jc00660xqino9jecr5/"/>
+    <id>/ckilas0jc00660xqino9jecr5/</id>
+    <published>2018-05-24T06:07:58.000Z</published>
+    <updated>2020-12-12T06:07:22.027Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;有时候我们可能需要在一些场景来显示一些弹窗，但是程序弹出的窗口会被浏览器直接拦截掉，以为是恶意弹窗。所以我们针对这样的场景应该怎么解决了？下面的方案可能只是针对一部分场景。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="前端" scheme="/categories/frontend/"/>
+    
+    
+      <category term="javascript" scheme="/tags/javascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用DefinePlugin区分开发和线上打包优化</title>
+    <link href="/ckilas0ii004m0xqixg97lfwz/"/>
+    <id>/ckilas0ii004m0xqixg97lfwz/</id>
+    <published>2018-05-20T03:44:53.000Z</published>
+    <updated>2020-12-12T06:07:22.027Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;基于webpack开发的时候，我们有些代码只需要在开发时期来运行，例如打印详细的错误或警告信息。有些代码我们需要在线上运行的时候在执行，例如谷歌用户行为分析，如果在开发的时候就运行，会导致线上打点的结果不是很准确，失去了分析的意义。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="前端" scheme="/categories/frontend/"/>
+    
+    
+      <category term="javascript" scheme="/tags/javascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>web使用facebook和line等分享</title>
+    <link href="/ckilas0if004f0xqiukqayp0t/"/>
+    <id>/ckilas0if004f0xqiukqayp0t/</id>
+    <published>2018-05-15T15:04:01.000Z</published>
+    <updated>2020-12-12T06:07:22.027Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;​我们在做开发的时候，需要将自己开发的网页分享到facebook、telegram、line等页面。然后需要在分享到的社交软件或者是朋友圈的时候，展示一些和链接相关的文案和图片（也就是富媒体展示）。在国内的一些社交网站上可以调用SDK或者url使用传递参数的方式来展示分享的内容。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="前端" scheme="/categories/frontend/"/>
+    
+    
+      <category term="javascript" scheme="/tags/javascript/"/>
+    
+  </entry>
+  
+</feed>

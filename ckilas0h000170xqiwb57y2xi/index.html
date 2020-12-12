@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+<!--百度统计-->
+<script>
+    // var _hmt = _hmt || [];
+    // (function () {
+    //     var hm = document.createElement("script");
+    //     hm.src = "https://hm.baidu.com/hm.js?964de0b14aeaff7fd14f418fd4350644";
+    //     var s = document.getElementsByTagName("script")[0];
+    //     s.parentNode.insertBefore(hm, s);
+    // })();
+</script>
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>
+        
+        React长列表详情返回后保留位置 |
+        
+        强哥的网站</title>
+    <meta name="description" content="Fed Tech Official Website">
+    <meta name="keywords" content="Github,Hexo,FED,Tech">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="target-densitydpi=device-dpi,user-scalable=no,initial-scale=1,maximum-scale=1, minimum-scale=1">
+    <link rel="shortcut icon" href="https://gitee.com/fqzhang/web-assets/raw/master/uPic/2020/06/avatar-fqyKY9.jpg">
+    <link rel="alternate" href="/atom.xml" title="强哥的网站">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="在React项目中我们从列表点击到详情页面，再返回的时候，会回到列表的顶部，用户体验比较差； 适用环境：  列表页面使用的iscroll 列表使用的分页加载，及上划加载下一页 在列表页的任意位置点击到详情 返回到列表要定位到点击之前的滚动条位置">
+<meta name="keywords" content="javascript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="React长列表详情返回后保留位置">
+<meta property="og:url" content="/ckilas0h000170xqiwb57y2xi/index.html">
+<meta property="og:site_name" content="强哥的网站">
+<meta property="og:description" content="在React项目中我们从列表点击到详情页面，再返回的时候，会回到列表的顶部，用户体验比较差； 适用环境：  列表页面使用的iscroll 列表使用的分页加载，及上划加载下一页 在列表页的任意位置点击到详情 返回到列表要定位到点击之前的滚动条位置">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2020-12-12T06:07:22.023Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="React长列表详情返回后保留位置">
+<meta name="twitter:description" content="在React项目中我们从列表点击到详情页面，再返回的时候，会回到列表的顶部，用户体验比较差； 适用环境：  列表页面使用的iscroll 列表使用的分页加载，及上划加载下一页 在列表页的任意位置点击到详情 返回到列表要定位到点击之前的滚动条位置">
+
+    <!--<link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+    <link href='//cdn.bootcss.com/node-waves/0.7.5/waves.min.css' rel='stylesheet'> -->
+    <link rel="stylesheet" href="/style.css">
+
+    
+
+    <script>
+        function setLoadingBarProgress(num) {
+            document.getElementById('loading-bar').style.width = num + "%";
+        }
+    </script>
+</head>
+</html>
+<body>
+<a name="top"></a>
+<div id="loading-bar-wrapper">
+    <div id="loading-bar"></div>
+</div>
+
+
+<script>setLoadingBarProgress(20)</script>
+<header class="l_header">
+    <div class="wrapper container">
+        <a class="logo flat-box" href='/'>
+            强哥的网站
+        </a>
+        <div class='menu'>
+            <ul class='h-list'>
+                
+                <li>
+                    <a class='flat-box nav-home' href='/'>
+                        首页
+                    </a>
+                </li>
+                
+                <li>
+                    <a class='flat-box nav-archives' href='/archives/'>
+                        归档
+                    </a>
+                </li>
+                
+                <li>
+                    <a class='flat-box nav-front' href='/categories/frontend/'>
+                        前端
+                    </a>
+                </li>
+                
+                <li>
+                    <a class='flat-box nav-project' href='/project/'>
+                        项目
+                    </a>
+                </li>
+                
+            </ul>
+            <div class='underline'></div>
+        </div>
+        
+        <div class="m_search">
+            <form name="searchform" class="form u-search-form">
+                <input type="text" class="input u-search-input" placeholder="输入关键字"/>
+                <span class="icon icon-search"></span>
+            </form>
+        </div>
+        
+        <ul class='switcher h-list'>
+            
+            <li class='s-search'><a href='javascript:void(0)'><span class="icon icon-search"></span></a></li>
+            
+            <li class='s-menu'><a href='javascript:void(0)'><span class="icon icon-menu"></span></a></li>
+        </ul>
+    </div>
+    <aside class="menu-phone">
+        <nav>
+            
+            <a href="/" class="nav-home nav">
+                首页
+            </a>
+            
+            <a href="/archives/" class="nav-archives nav">
+                归档
+            </a>
+            
+            <a href="/categories/frontend/" class="nav-front nav">
+                前端
+            </a>
+            
+            <a href="/project/" class="nav-project nav">
+                项目
+            </a>
+            
+        </nav>
+    </aside>
+</header>
+
+<script>setLoadingBarProgress(40)</script>
+<div class="l_body">
+    <a name="top_app"></a>
+    <div class='container'>
+        <div class='l_main'>
+            <article
+  id="post-React长列表详情返回后保留位置"
+  class="post white-box article-type-post"
+  itemscope
+  itemprop="blogPost"
+>
+  <a target="_blank" class="edit-article" href="https://github.com/gslnzfq/blog-src/edit/master/source/_posts/React长列表详情返回后保留位置.md">编辑</a>
+  <section class="meta">
+    <h2 class="title">
+      <a href="/ckilas0h000170xqiwb57y2xi/">
+        React长列表详情返回后保留位置
+      </a>
+    </h2>
+    
+
+<div class='cats'>
+    <a href="/categories/frontend/">前端</a>
+</div>
+
+  </section>
+  
+  <section class="tog"></section>
+  
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      <p>在React项目中我们从列表点击到详情页面，再返回的时候，会回到列表的顶部，用户体验比较差；</p>
+<p>适用环境：</p>
+<ul>
+<li>列表页面使用的iscroll</li>
+<li>列表使用的分页加载，及上划加载下一页</li>
+<li>在列表页的任意位置点击到详情</li>
+<li>返回到列表要定位到点击之前的滚动条位置</li>
+</ul>
+<a id="more"></a>
+<p>我们可以借助localStorage存储返回之前的位置，返回的时候重新数据并且滚动到对应的位置，详细实现如下：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">'react'</span>;</span><br><span class="line"><span class="comment">// 处理兼容性，获取滚动的距离</span></span><br><span class="line"><span class="comment">// 获取滚动条的位置</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getScrollTop</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> supportPageOffset = <span class="built_in">window</span>.pageXOffset !== <span class="literal">undefined</span>;</span><br><span class="line">    <span class="keyword">let</span> isCSS1Compat = ((<span class="built_in">document</span>.compatMode || <span class="string">""</span>) === <span class="string">"CSS1Compat"</span>);</span><br><span class="line">    <span class="keyword">return</span> supportPageOffset ? <span class="built_in">window</span>.pageYOffset : isCSS1Compat ? <span class="built_in">document</span>.documentElement.scrollTop : <span class="built_in">document</span>.body.scrollTop;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 每页分页的大小</span></span><br><span class="line"><span class="keyword">const</span> pageSize = <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">List</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span></span>&#123;</span><br><span class="line">    state = &#123;</span><br><span class="line">        list: [],</span><br><span class="line">        <span class="comment">// 当前页面</span></span><br><span class="line">        currentPage: <span class="number">1</span>,</span><br><span class="line">        <span class="comment">// 是否首次加载</span></span><br><span class="line">        firstLoad: <span class="literal">true</span>,</span><br><span class="line">        <span class="comment">// 在点击到详情之前，列表的长度，方面下次取该长度的数据</span></span><br><span class="line">        lastLength: <span class="number">0</span></span><br><span class="line">    &#125;;</span><br><span class="line">    getListData()&#123;</span><br><span class="line">        <span class="keyword">let</span> that = <span class="keyword">this</span>;</span><br><span class="line">        <span class="keyword">let</span> &#123;currentPage, list, firstLoad, lastLength&#125; = <span class="keyword">this</span>.state;</span><br><span class="line">        <span class="keyword">let</span> size = pageSize;</span><br><span class="line">        <span class="comment">// 检查本地是否存储了，点击之前的位置信息</span></span><br><span class="line">        <span class="keyword">let</span> pos = localStorage.getItem(<span class="string">'list_pos'</span>);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (pos) &#123;</span><br><span class="line">            pos = <span class="built_in">JSON</span>.parse(pos);</span><br><span class="line">            <span class="comment">// 当前页</span></span><br><span class="line">            currentPage = pos.currentPage;</span><br><span class="line">            <span class="comment">// 上次离开时候页面的长度</span></span><br><span class="line">            lastLength = pos.pageLength;</span><br><span class="line">            <span class="comment">// 上次来开时滚动条的位置</span></span><br><span class="line">            top = pos.top;</span><br><span class="line">            <span class="comment">//  清理缓存</span></span><br><span class="line">            localStorage.removeItem(<span class="string">'list_pos'</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//  表示在详情界面返回的，需要处理</span></span><br><span class="line">        <span class="keyword">let</span> isDetailBack = top !== <span class="literal">undefined</span> &amp;&amp; firstLoad;</span><br><span class="line">        <span class="keyword">if</span> (isDetailBack) &#123;</span><br><span class="line">            currentPage = <span class="number">1</span>;</span><br><span class="line">            size = lastLength;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">         fetchData(&#123;<span class="attr">page</span>: currentPage, <span class="attr">pageSize</span>: lastLength&#125;).then(<span class="function"><span class="params">data</span>=&gt;</span>&#123;</span><br><span class="line">            <span class="comment">//  window.scrollTo(0, top);</span></span><br><span class="line">             <span class="comment">// 如果使用的iscroll，滚动到对应的位置上</span></span><br><span class="line">             scroll.scrollTo(<span class="number">0</span>, <span class="built_in">Number</span>(top));</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    goDetail(id) &#123;</span><br><span class="line">        <span class="comment">// 存储当前页面scrollTop和页面的条数</span></span><br><span class="line">        <span class="keyword">const</span> &#123;currentPage, list&#125; = <span class="keyword">this</span>.state;</span><br><span class="line">        <span class="keyword">const</span> data = &#123;</span><br><span class="line">            <span class="comment">// 当前页，返回的使用</span></span><br><span class="line">            currentPage,</span><br><span class="line">            <span class="comment">// 当前的top</span></span><br><span class="line">            top: <span class="keyword">this</span>.scroll.y || getScrollTop(),</span><br><span class="line">            <span class="comment">// 当前拉取的数据长度</span></span><br><span class="line">            pageLength: list.length</span><br><span class="line">        &#125;;</span><br><span class="line">        localStorage.setItem(<span class="string">'list_pos'</span>, <span class="built_in">JSON</span>.stringify(data));</span><br><span class="line">        router.push(<span class="string">'/detail/'</span> + id );</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>实际的实现步骤：</p>
+<ol>
+<li>保存当前的页码，列表数据长度，滚动位置；</li>
+<li>跳转到详情页面；</li>
+<li>返回检查是否有第一步保存的数据；</li>
+<li>有就获取列表数据长度和滚动位置；</li>
+<li>请求列表长度数量的数据；</li>
+<li>渲染列表，滚动位置，清理掉第一步保存的数据；</li>
+<li>完成。</li>
+</ol>
+
+    </div>
+    <!-- 循环显示所有的tags -->
+    
+    <div class="article-tags tags">
+      
+      <a href="/tags/javascript/">javascript</a>
+      
+    </div>
+    
+  </section>
+  <div class="copyright-block">
+    <p>- 复制请标明出处 -</p>
+    <p>撰写时间：2019年11月01日</p>
+    <p>
+      联系方式：<a href="mailto:zhangfqmail@126.com">zhangfqmail@126.com</a>
+    </p>
+    <p>
+      本文链接：<a
+        href="http://gslnzfq.github.io/ckilas0h000170xqiwb57y2xi/"
+        target="_blank"
+        >React长列表详情返回后保留位置</a
+      >
+    </p>
+  </div>
+  
+</article>
+
+        </div>
+        <aside class='l_side'>
+            
+<section class='m_widget about'>
+    
+    <a href="/about"><img class='avatar waves-image' src='https://gitee.com/fqzhang/web-assets/raw/master/uPic/2020/06/avatar-fqyKY9.jpg'/></a>
+    
+    <div class='header'>强哥</div>
+    <div class='content'>
+        <div>前端工程师5年,技术框架/工具爱好者</div>
+    </div>
+</section>
+
+
+
+<div class="m_widget tagcloud">
+    <div class="header">标签</div>
+    <div class='content'>
+        <a href="/tags/Webstorm/" style="font-size: 14px; color: #808080">Webstorm</a> <a href="/tags/angularjs/" style="font-size: 15.2px; color: #666">angularjs</a> <a href="/tags/centos/" style="font-size: 18.8px; color: #1a1a1a">centos</a> <a href="/tags/css/" style="font-size: 18.8px; color: #1a1a1a">css</a> <a href="/tags/docker/" style="font-size: 15.2px; color: #666">docker</a> <a href="/tags/git/" style="font-size: 14px; color: #808080">git</a> <a href="/tags/hadoop/" style="font-size: 14px; color: #808080">hadoop</a> <a href="/tags/java/" style="font-size: 15.2px; color: #666">java</a> <a href="/tags/javascript/" style="font-size: 20px; color: #000">javascript</a> <a href="/tags/mixpanel/" style="font-size: 14px; color: #808080">mixpanel</a> <a href="/tags/mui/" style="font-size: 16.4px; color: #4d4d4d">mui</a> <a href="/tags/mysql/" style="font-size: 15.2px; color: #666">mysql</a> <a href="/tags/nginx/" style="font-size: 15.2px; color: #666">nginx</a> <a href="/tags/npm/" style="font-size: 14px; color: #808080">npm</a> <a href="/tags/oracle/" style="font-size: 14px; color: #808080">oracle</a> <a href="/tags/react/" style="font-size: 14px; color: #808080">react</a> <a href="/tags/ubuntu/" style="font-size: 18.8px; color: #1a1a1a">ubuntu</a> <a href="/tags/vue/" style="font-size: 17.6px; color: #333">vue</a>
+    </div>
+</div>
+
+
+
+<section class='m_widget categories'>
+    <div class='header'>分类</div>
+    <div class='content'>
+        
+        <ul class="entry">
+            
+            <li><a class="flat-box" href="/categories/linux/">
+                    <div class='name'>linux</div>
+                    <div class='badget'>11</div>
+                </a></li>
+            
+            <li><a class="flat-box" href="/categories/macOS/">
+                    <div class='name'>macOS</div>
+                    <div class='badget'>2</div>
+                </a></li>
+            
+            <li><a class="flat-box" href="/categories/frontend/">
+                    <div class='name'>前端</div>
+                    <div class='badget'>47</div>
+                </a></li>
+            
+            <li><a class="flat-box" href="/categories/backend/">
+                    <div class='name'>后端</div>
+                    <div class='badget'>5</div>
+                </a></li>
+            
+            <li><a class="flat-box" href="/categories/tools/">
+                    <div class='name'>工具</div>
+                    <div class='badget'>2</div>
+                </a></li>
+            
+            <li><a class="flat-box" href="/categories/database/">
+                    <div class='name'>数据库</div>
+                    <div class='badget'>3</div>
+                </a></li>
+            
+            <li><a class="flat-box" href="/categories/algorithm/">
+                    <div class='name'>算法</div>
+                    <div class='badget'>3</div>
+                </a></li>
+            
+            <li><a class="flat-box" href="/categories/editor/">
+                    <div class='name'>编辑器</div>
+                    <div class='badget'>2</div>
+                </a></li>
+            
+        </ul>
+        
+    </div>
+</section>
+
+
+<section class='m_widget friendly-links'>
+    <div class='header'>友情链接</div>
+    <div class='content'>
+        <ul class="entry">
+            
+            <li><a class="flat-box" target="_blank" href="https://gitee.com/fqzhang">
+                    <div class='name'>码云</div>
+                </a></li>
+            
+            <li><a class="flat-box" target="_blank" href="https://github.com/gslnzfq">
+                    <div class='name'>Github</div>
+                </a></li>
+            
+            <li><a class="flat-box" target="_blank" href="https://www.upliveapp.com">
+                    <div class='name'>Up直播主站</div>
+                </a></li>
+            
+            <li><a class="flat-box" target="_blank" href="https://coninup.network">
+                    <div class='name'>CoinUP主站</div>
+                </a></li>
+            
+            <li><a class="flat-box" target="_blank" href="http://taobaofed.org">
+                    <div class='name'>淘宝前端团队</div>
+                </a></li>
+            
+            <li><a class="flat-box" target="_blank" href="https://github.com/gslnzfq/zenbone">
+                    <div class='name'>前端构建工具</div>
+                </a></li>
+            
+        </ul>
+    </div>
+</section>
+
+
+
+        </aside>
+        <script>setLoadingBarProgress(60)</script>
+    </div>
+</div>
+<footer id="footer" class="clearfix">
+    <div class="social-wrapper">
+        
+        
+        <a href="https://github.com/gslnzfq" class="social github"
+           target="_blank" rel="external">
+            <span class="icon icon-github"></span>
+        </a>
+        
+        <a href="https://weibo.com/u/6286882668" class="social sina-weibo"
+           target="_blank" rel="external">
+            <span class="icon icon-sina-weibo"></span>
+        </a>
+        
+        <a href="mailto:zhangfqmail@126.com" class="social mail"
+           target="_blank" rel="external">
+            <span class="icon icon-mail"></span>
+        </a>
+        
+        
+    </div>
+
+    <div>&copy; 2016-2020 强哥. Theme <a
+                href='https://github.com/stkevintan/hexo-theme-material-flow' class="codename">MaterialFlow</a>.
+    </div>
+</footer>
+
+
+<script>setLoadingBarProgress(80)</script>
+
+
+<script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src='//cdn.bootcss.com/node-waves/0.7.5/waves.min.js'></script>
+<!--<script src="//cdn.bootcss.com/scrollReveal.js/3.3.2/scrollreveal.min.js"></script>-->
+<script src="/js/jquery.fitvids.js"></script>
+<script>
+    var GOOGLE_CUSTOM_SEARCH_API_KEY = "";
+    var GOOGLE_CUSTOM_SEARCH_ENGINE_ID = "";
+    var ALGOLIA_API_KEY = "";
+    var ALGOLIA_APP_ID = "";
+    var ALGOLIA_INDEX_NAME = "";
+    var AZURE_SERVICE_NAME = "";
+    var AZURE_INDEX_NAME = "";
+    var AZURE_QUERY_KEY = "";
+    var BAIDU_API_ID = "";
+    var SEARCH_SERVICE = "hexo";
+    var ROOT = "/" || "/";
+    if (!ROOT.endsWith('/')) ROOT += '/';
+</script>
+<script src="/js/search.js"></script>
+<script src="/js/app.js"></script>
+
+
+<script>setLoadingBarProgress(100)</script>
+</body>
+</html>
